@@ -11,7 +11,288 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+# DEFINITIONS
+definitions:
+  markdown: &markdown
+    widget: 'markdown'
+    buttons:
+      - 'bold'
+      - 'italic'
+      - 'link'
+      - 'heading-one'
+      - 'heading-two'
+      - 'heading-three'
+      - 'quote'
+      - 'bulleted-list'
+      - 'numbered-list'
+    editorComponents:
+      - 'image'
+
+
 collections:
+# PERSONAL COLLECTIONS
+  - name: 'page'
+    label: 'Pages'
+    label_singular: 'Page'
+    description: "Les pages de SFPR. Il est seulement possible de modifier leur contenu, pas d'en créer de nouvelles."
+    editor:
+      preview: false
+    files:
+      # HOME - Home page of SFPR
+      - name: 'home'
+        label: "Page d'accueil"
+        file: 'assets/content/pages/home.json'
+        fields:
+          - name: 'title'
+            label: 'Titre du site'
+            widget: 'string'
+          - name: 'intro'
+            label: 'Introduction'
+            widget: 'text'
+          - name: 'cover'
+            label: 'Image de couverture'
+            widget: 'image'
+          - name: 'featured_article'
+            label: 'Article mis en avant'
+            required: false
+            widget: 'relation'
+            collection: 'article'
+            searchFields:
+              - 'title'
+            valueField: 'title'
+
+      # ABOUT US - The page describing the SFPR team
+      - name: 'about-us'
+        label: 'Qui sommes-nous ?'
+        file: 'assets/content/pages/about-us.json'
+        fields:
+          - name: 'title'
+            label: 'Titre'
+            widget: 'string'
+          - name: 'body'
+            label: 'Corps de texte'
+            <<: *markdown
+          - name: 'administrators'
+            label: 'Membres du bureau'
+            widget: 'string'
+            hint: 'Sous-titre de la section "Membres du bureau"'
+          - name: 'founders'
+            label: 'Membres fondateurs'
+            widget: 'string'
+            hint: 'Sous-titre de la section "Membres fondateurs"'
+          - name: 'members'
+            label: 'Sociétaires'
+            widget: 'string'
+            hint: 'Sous-titre de la section "Sociétaires"'
+
+      # NEWS - The page including the news of SFPR
+      - name: 'news'
+        label: 'Vie de la société'
+        file: 'assets/content/pages/news.json'
+        fields:
+          - label: 'Titre'
+            name: 'title'
+            widget: 'string'
+          - label: 'Corps de texte'
+            name: 'body'
+            <<: *markdown
+
+      # PUBLICATIONS - The page including the publications of SFPR members
+      - name: 'publications'
+        label: 'Publications'
+        file: 'assets/content/pages/publications.json'
+        fields:
+          - label: 'Titre'
+            name: 'title'
+            widget: 'string'
+          - label: 'Corps de texte'
+            name: 'body'
+            <<: *markdown
+
+      # EVENTS - The page including the events of SFPR
+      - label: 'Évènements'
+        name: 'events'
+        file: 'assets/content/pages/events.json'
+        fields:
+          - label: 'Titre'
+            name: 'title'
+            widget: 'string'
+          - label: 'Corps de texte'
+            name: 'body'
+            <<: *markdown
+
+      # BLOGS - The page including the blogs articles of SFPR
+      - label: 'Articles de blog'
+        name: 'blogs'
+        file: 'assets/content/pages/blogs.json'
+        fields:
+          - label: 'Titre'
+            name: 'title'
+            widget: 'string'
+          - label: 'Corps de texte'
+            name: 'body'
+            <<: *markdown
+
+      # SEARCH - The search page
+      - label: 'Rechercher'
+        name: 'search'
+        file: 'assets/content/pages/search.json'
+        fields:
+          - label: 'Titre'
+            name: 'title'
+            widget: 'string'
+          - label: 'Nom du champ de recherche'
+            name: 'input_label'
+            widget: 'string'
+
+  # ARTICLES - A blog article
+  - name: 'article'
+    label: 'Articles'
+    label_singular: 'Article'
+    description: 'Les articles publiés sur le site.'
+    # format: 'json'
+    folder: 'src/pages/articles'
+    sortableFields: ['date', 'title']
+    create: true
+    slug: '{{fields.date}}-{{slug}}'
+    preview_path: 'articles/{{slug}}'
+    summary: '{{month}}/{{year}} - {{fields.title}}'
+    editor:
+      preview: false
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - label: 'Titre'
+        name: 'title'
+        widget: 'string'
+      - label: 'Type'
+        name: 'type'
+        widget: 'select'
+        options:
+          - label: 'Événements'
+            value: 'event'
+          - label: 'Publications'
+            value: 'publication'
+          - label: 'Vie de la société'
+            value: 'news'
+          - label: 'Article de blog'
+            value: 'blog'
+      - label: 'Illustration principale'
+        name: 'picture'
+        widget: 'object'
+        fields:
+          - label: 'Image'
+            name: 'src'
+            widget: 'image'
+            required: false
+          - label: 'Affichage'
+            name: 'display'
+            widget: 'select'
+            default: 'cover'
+            multiple: false
+            hint: "Un bandeau s'affichera en pleine page, et ses bords peuvent être rognés. Un médaillon (comme une couverture de livre) sera plus petit et ne sera jamais rogné."
+            options:
+              - label: 'Médaillon'
+                value: 'embed'
+              - label: 'Bandeau'
+                value: 'cover'
+      - label: 'Corps de texte'
+        name: 'body'
+        <<: *markdown
+      - label: 'Date de publication'
+        name: 'date'
+        widget: 'datetime'
+        format: 'YYYY-MM-DD'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: false
+        hint: "La date de publication influe sur l'odre d'affichage des articles. Vous pouvez indiquer aujourd'hui, ou une date dans le passé."
+      - label: 'Options'
+        name: 'settings'
+        widget: 'object'
+        collapsed: true
+        fields:
+          - label: 'Invisible'
+            name: 'hidden'
+            widget: 'boolean'
+            hint: "Si vous cochez cette case, l'article ne s'affichera pas sur le site internet."
+            default: false
+          - label: 'Description courte'
+            name: 'description'
+            widget: 'text'
+            required: false
+            hint: "Si vous choisissez de remplir ce texte, il s'affichera comme résumé de l'article (sinon, le début de l'article sera utilisé)."
+
+  # MEMBERS - A member of SFPR
+  - name: 'member'
+    label: 'Sociétaires'
+    label_singular: 'Sociétaire'
+    description: 'La liste des sociétaires de la SFPR'
+    identifier_field: 'name'
+    format: 'json'
+    folder: 'assets/content/members'
+    create: true
+    slug: '{{fields.firstName}}-{{fields.lastName}}'
+    summary: '{{fields.firstName}} {{fields.lastName}}'
+    editor:
+      preview: false
+    fields:
+      - name: 'firstName'
+        label: 'Prénom'
+        widget: 'string'
+      - name: 'lastName'
+        label: 'Nom de famille'
+        widget: 'string'
+      - name: 'picture'
+        label: 'Photo'
+        widget: 'image'
+        required: false
+        hint: 'Le visage de la personne doit être (approximativement) au centre de la photo.'
+      - name: 'roles'
+        label: 'Statut'
+        widget: 'select'
+        multiple: true
+        required: false
+        options:
+          - label: 'Membre fondateur'
+            value: 'FOUNDER'
+          - label: 'Membre du bureau'
+            value: 'ADMINISTRATOR'
+      - name: 'job'
+        label: 'Poste actuel dans la SFPR'
+        widget: 'string'
+        required: false
+      - name: 'website'
+        label: 'Site internet'
+        widget: 'string'
+        required: false
+        hint: 'Le lien vers la page internet de cette personne.'
+
+  - name: 'translation'
+    label: 'Textes'
+    label_singular: 'Texte'
+    description: 'Les textes utilisés partout sur le site.'
+    folder: 'assets/content/translations'
+    format: 'json'
+    create: true
+    editor:
+      preview: false
+    slug: '{{fields.key}}'
+    summary: '[{{fields.key}}] {{fields.text}}'
+    fields:
+      - name: 'key'
+        label: 'Clé'
+        widget: 'string'
+        hint: '[NE PAS MODIFIER]'
+        pattern:
+          [
+            '^[a-z]+$',
+            'Cette clé ne peut contenir que des minuscules non-accentuées.',
+          ]
+      - name: 'text'
+        label: 'Texte'
+        hint: 'Le texte qui doit apparaître sur le site'
+        widget: 'string'
+
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
