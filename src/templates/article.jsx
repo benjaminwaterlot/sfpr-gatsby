@@ -3,14 +3,8 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 
-export const CategoryPageTemplate = ({
-  content,
-  ContentComponent = Content,
-  title,
-  helmet,
-}) => {
+export const ArticleTemplate = ({ body, title, helmet }) => {
   return (
     <section className="section">
       {helmet || ''}
@@ -20,7 +14,7 @@ export const CategoryPageTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <ContentComponent content={content} />
+            {body}
           </div>
         </div>
       </div>
@@ -28,22 +22,13 @@ export const CategoryPageTemplate = ({
   )
 }
 
-CategoryPageTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  ContentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
-}
-
-const CategoryPage = ({ data }) => {
+const Article = ({ data }) => {
   const { markdownRemark: page } = data
 
   return (
     <Layout>
-      <CategoryPageTemplate
-        content={page.html}
-        ContentComponent={HTMLContent}
+      <ArticleTemplate
+        body={<div dangerouslySetInnerHTML={{ __html: page.html }} />}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${page.frontmatter.title}`}</title>
@@ -56,13 +41,13 @@ const CategoryPage = ({ data }) => {
   )
 }
 
-CategoryPage.propTypes = {
+Article.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default CategoryPage
+export default Article
 
 export const pageQuery = graphql`
   query pageByID($id: String!) {

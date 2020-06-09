@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+// import BlogRoll from '../../components/BlogRoll'
 
 const IndexPage = () => (
   <Layout>
@@ -26,7 +26,8 @@ const IndexPage = () => (
     <section className="section">
       <div className="container">
         <div className="content">
-          <BlogRoll />
+          {/* <BlogRoll /> */}
+          Articles...
         </div>
       </div>
     </section>
