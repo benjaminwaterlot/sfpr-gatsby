@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: test event
+title: test event new
 type: event
 picture:
   display: cover
