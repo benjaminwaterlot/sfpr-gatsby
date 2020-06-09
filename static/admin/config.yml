@@ -36,8 +36,8 @@ collections:
     label: 'Pages'
     label_singular: 'Page'
     description: "Les pages de SFPR. Il est seulement possible de modifier leur contenu, pas d'en créer de nouvelles."
-    editor:
-      preview: false
+    # editor:
+    #   preview: false
     files:
       # HOME - Home page of SFPR
       # - name: 'home'

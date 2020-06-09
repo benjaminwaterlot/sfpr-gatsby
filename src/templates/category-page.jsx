@@ -14,14 +14,15 @@ export const CategoryPageTemplate = ({ body, helmet, title, articles }) => (
           {body}
           <h2 className="title is-2">Articles</h2>
           <div className="tile is-ancestor">
-            {articles.map((article) => (
-              <div key={article.id} className="tile is-parent is-4">
-                <div className="tile is-child box">
-                  <h3 className="subtitle">{article.frontmatter.title}</h3>
-                  <p>{article.excerpt}</p>
+            {articles &&
+              articles.map((article) => (
+                <div key={article.id} className="tile is-parent is-4">
+                  <div className="tile is-child box">
+                    <h3 className="subtitle">{article.frontmatter.title}</h3>
+                    <p>{article.excerpt}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
