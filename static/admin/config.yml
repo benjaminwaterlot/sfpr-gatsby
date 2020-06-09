@@ -193,7 +193,7 @@ collections:
           - label: 'Affichage'
             name: 'display'
             widget: 'select'
-            default: 'cover'
+            default: 'embed'
             multiple: false
             hint: "Un bandeau s'affichera en pleine page, et ses bords peuvent être rognés. Un médaillon (comme une couverture de livre) sera plus petit et ne sera jamais rogné."
             options:
