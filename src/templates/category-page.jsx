@@ -6,18 +6,16 @@ import Layout from '../components/Layout'
 import CardGrid from '../components/CardGrid'
 
 export const CategoryPageTemplate = ({ body, helmet, title, articles }) => (
-  <div className="container content">
+  <div className="container">
     {helmet || ''}
     {/* BODY */}
-    <div className="box py-5 px-5">
+    <div className="box py-6 px-6">
       <h1 className="title is-1 has-text-weight-bold">{title}</h1>
       {body}
     </div>
 
     {/* ARTICLES */}
-    <div className="columns is-multiline">
-      <CardGrid articles={articles} />
-    </div>
+    <CardGrid articles={articles} />
   </div>
 )
 

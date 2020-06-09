@@ -8,36 +8,6 @@ const logErrors = (errors) => {
 }
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  /**
-   * Create index page
-   */
-  const indexPageQuery = await graphql(`
-    {
-      page: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-        id
-        fields {
-          slug
-        }
-      }
-    }
-  `)
-
-  if (indexPageQuery.errors) return logErrors(indexPageQuery.errors)
-
-  const { page } = indexPageQuery.data
-
-  createPage({
-    path: page.fields.slug,
-    component: path.resolve('src/templates/index-page.jsx'),
-    context: {
-      id: page.id,
-    },
-  })
-
-  /**
-   *
-   * Create articles
-   */
   const articlesQuery = await graphql(`
     {
       allMarkdownRemark(
@@ -58,6 +28,48 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   const articleNodes = articlesQuery.data.allMarkdownRemark.nodes
 
+  /**
+   * Create index page
+   */
+  const indexPageQuery = await graphql(`
+    {
+      page: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+        id
+        fields {
+          slug
+        }
+      }
+    }
+  `)
+
+  if (indexPageQuery.errors) return logErrors(indexPageQuery.errors)
+
+  const { page } = indexPageQuery.data
+  const ITEMS_PER_PAGE = 3
+
+  const numberOfPages = Math.ceil(articleNodes.length / ITEMS_PER_PAGE)
+
+  Array(numberOfPages)
+    .fill()
+    .forEach((_, idx) => {
+      createPage({
+        path:
+          idx === 0 ? `${page.fields.slug}` : `${page.fields.slug}${idx + 1}`,
+        component: path.resolve('src/templates/index-page.jsx'),
+        context: {
+          id: page.id,
+          from: idx * ITEMS_PER_PAGE,
+          currentPage: idx + 1,
+          numberOfPages,
+          itemsPerPage: ITEMS_PER_PAGE,
+        },
+      })
+    })
+
+  /**
+   *
+   * Create articles
+   */
   articleNodes.forEach((node) => {
     createPage({
       path: node.fields.slug,

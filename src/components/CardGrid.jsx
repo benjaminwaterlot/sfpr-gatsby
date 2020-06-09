@@ -48,7 +48,7 @@ const Card = ({ article }) => {
       <Link to={article.fields.slug}>
         <div
           className="card is-full-height is-interactive"
-          style={{ borderRadius: 8, overflow: 'hidden' }}
+          style={{ borderRadius: 6, overflow: 'hidden' }}
         >
           {picture.src && picture.display === 'cover' && (
             <div className="card-image">
