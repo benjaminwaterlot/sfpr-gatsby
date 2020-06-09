@@ -1,7 +1,7 @@
 ---
 templateKey: article
-title: L'université face à la mystique
-type: publication
+title: Event > L'université face à la mystique
+type: event
 picture:
   display: cover
   src: /img/home-jumbotron.jpg

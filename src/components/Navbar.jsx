@@ -1,98 +1,98 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import Cover from '../img/app-cover.jpg'
+import Logo from '../img/app-logo.png'
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
+const LINKS = [
+  {
+    label: 'Accueil',
+    route: '/',
+  },
+  {
+    label: 'Qui sommes-nous ?',
+    route: '/about-us',
+  },
+  {
+    label: 'Vie de la société',
+    route: '/news',
+  },
+  {
+    label: 'Événements',
+    route: '/events',
+  },
+  {
+    label: 'Publications',
+    route: '/publications',
+  },
+  {
+    label: 'Blogs',
+    route: '/blogs',
+  },
+  {
+    label: 'About',
+    route: '/about',
+  },
+  {
+    label: 'Products',
+    route: '/products',
+  },
+  {
+    label: 'Blog',
+    route: '/blog',
+  },
+  {
+    label: 'Contact',
+    route: '/contact',
+  },
+]
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
-
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
+const Navbar = () => (
+  <div
+    className="container is-fluid pt-5 has-text-white"
+    style={{ backgroundImage: `url(${Cover})`, paddingBottom: '6rem' }}
+  >
+    <div className="level pb-6">
+      <div className="level-item">
+        <img src={Logo} alt="Logo de la SFPR" style={{ width: '88px' }} />
+      </div>
+    </div>
+    <h1 className="title is-2 has-text-white has-text-centered mb-6">
+      Société Francophone de Philosophie de la Religion
+    </h1>
+    <p
+      className="subtitle is-6 has-text-white has-text-centered mb-6"
+      style={{ maxWidth: 700, marginLeft: 'auto', marginRight: 'auto' }}
+    >
+      La Société Francophone de Philosophie de la Religion a pour but de
+      promouvoir les recherches philosophiques universitaires sur les religions
+      et l'expérience religieuse.
+    </p>
+    <nav role="navigation" aria-label="main-navigation">
+      <div>
+        <div className="level">
+          <div className="level-left">
+            {LINKS.map((link) => (
+              <Link
+                className="button is-black is-small has-text-weight-bold mr-2"
+                to={link.route}
+                key={link.label}
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <div className="level-right">
+            <Link
+              className="button is-black is-small has-text-weight-bold mr-2"
+              to="/search"
+            >
+              Recherche
+            </Link>
           </div>
         </div>
-      </nav>
-    )
-  }
-}
+      </div>
+    </nav>
+  </div>
+)
 
 export default Navbar

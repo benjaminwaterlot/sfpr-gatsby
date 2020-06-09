@@ -21,7 +21,7 @@ Testimonials.propTypes = {
     PropTypes.shape({
       quote: PropTypes.string,
       author: PropTypes.string,
-    })
+    }),
   ),
 }
 

@@ -3,10 +3,22 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
+const logErrors = (errors) => {
+  errors.forEach((e) => console.error(e.toString()))
+  return Promise.reject(errors)
+}
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  /**
+   *
+   * Create articles
+   */
   const { errors, data } = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { frontmatter: { templateKey: { ne: "category-page" } } }
+      ) {
         nodes {
           id
           fields {
@@ -21,16 +33,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `)
 
-  if (errors) {
-    errors.forEach((e) => console.error(e.toString()))
-    return Promise.reject(errors)
-  }
+  if (errors) return logErrors(errors)
 
-  const posts = data.allMarkdownRemark.nodes
+  const content = data.allMarkdownRemark.nodes
 
-  posts.forEach((node) => {
-    const { id } = node
-    console.log('Creating post', node.fields.slug)
+  content.forEach((node) => {
+    console.log('Creating page: ', node.fields.slug)
 
     createPage({
       path: node.fields.slug,
@@ -40,15 +48,58 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       ),
       // additional data can be passed via context
       context: {
-        id,
+        id: node.id,
       },
     })
   })
 
-  // Tag pages:
+  /**
+   *
+   * Create category pages
+   */
+  const categoryPagesQuery = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "category-page" } } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            contains
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  `)
+
+  const categories = categoryPagesQuery.data.allMarkdownRemark.nodes
+  console.log('category', categories)
+  categories.forEach((categoryPage) => {
+    console.log('PAAAGE', categoryPage)
+
+    createPage({
+      path: categoryPage.fields.slug,
+      component: path.resolve(`src/templates/category-page.jsx`),
+      context: {
+        slug: categoryPage.fields.slug,
+        id: categoryPage.id,
+        articles: categoryPage.frontmatter.contains,
+      },
+    })
+  })
+
+  /**
+   *
+   * Create tags
+   */
   let tags = []
   // Iterate through each post, putting all found tags into `tags`
-  posts.forEach((edge) => {
+  content.forEach((edge) => {
     if (_.get(edge, 'node.frontmatter.tags')) {
       tags = tags.concat(edge.node.frontmatter.tags)
     }

@@ -8,6 +8,8 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -28,9 +30,8 @@ definitions:
     editorComponents:
       - 'image'
 
-
 collections:
-# PERSONAL COLLECTIONS
+  # PERSONAL COLLECTIONS
   - name: 'page'
     label: 'Pages'
     label_singular: 'Page'
@@ -39,68 +40,68 @@ collections:
       preview: false
     files:
       # HOME - Home page of SFPR
-      - name: 'home'
-        label: "Page d'accueil"
-        file: 'assets/content/pages/home.json'
-        fields:
-          - name: 'title'
-            label: 'Titre du site'
-            widget: 'string'
-          - name: 'intro'
-            label: 'Introduction'
-            widget: 'text'
-          - name: 'cover'
-            label: 'Image de couverture'
-            widget: 'image'
-          - name: 'featured_article'
-            label: 'Article mis en avant'
-            required: false
-            widget: 'relation'
-            collection: 'article'
-            searchFields:
-              - 'title'
-            valueField: 'title'
+      # - name: 'home'
+      #   label: "Page d'accueil"
+      #   file: 'assets/content/pages/home.json'
+      #   fields:
+      #     - name: 'title'
+      #       label: 'Titre du site'
+      #       widget: 'string'
+      #     - name: 'intro'
+      #       label: 'Introduction'
+      #       widget: 'text'
+      #     - name: 'cover'
+      #       label: 'Image de couverture'
+      #       widget: 'image'
+      #     - name: 'featured_article'
+      #       label: 'Article mis en avant'
+      #       required: false
+      #       widget: 'relation'
+      #       collection: 'article'
+      #       searchFields:
+      #         - 'title'
+      #       valueField: 'title'
 
       # ABOUT US - The page describing the SFPR team
-      - name: 'about-us'
-        label: 'Qui sommes-nous ?'
-        file: 'assets/content/pages/about-us.json'
-        fields:
-          - name: 'title'
-            label: 'Titre'
-            widget: 'string'
-          - name: 'body'
-            label: 'Corps de texte'
-            <<: *markdown
-          - name: 'administrators'
-            label: 'Membres du bureau'
-            widget: 'string'
-            hint: 'Sous-titre de la section "Membres du bureau"'
-          - name: 'founders'
-            label: 'Membres fondateurs'
-            widget: 'string'
-            hint: 'Sous-titre de la section "Membres fondateurs"'
-          - name: 'members'
-            label: 'Sociétaires'
-            widget: 'string'
-            hint: 'Sous-titre de la section "Sociétaires"'
+      # - name: 'about-us'
+      #   label: 'Qui sommes-nous ?'
+      #   file: 'assets/content/pages/about-us.json'
+      #   fields:
+      #     - name: 'title'
+      #       label: 'Titre'
+      #       widget: 'string'
+      #     - name: 'body'
+      #       label: 'Corps de texte'
+      #       <<: *markdown
+      #     - name: 'administrators'
+      #       label: 'Membres du bureau'
+      #       widget: 'string'
+      #       hint: 'Sous-titre de la section "Membres du bureau"'
+      #     - name: 'founders'
+      #       label: 'Membres fondateurs'
+      #       widget: 'string'
+      #       hint: 'Sous-titre de la section "Membres fondateurs"'
+      #     - name: 'members'
+      #       label: 'Sociétaires'
+      #       widget: 'string'
+      #       hint: 'Sous-titre de la section "Sociétaires"'
 
       # NEWS - The page including the news of SFPR
-      - name: 'news'
-        label: 'Vie de la société'
-        file: 'assets/content/pages/news.json'
-        fields:
-          - label: 'Titre'
-            name: 'title'
-            widget: 'string'
-          - label: 'Corps de texte'
-            name: 'body'
-            <<: *markdown
+      # - name: 'news'
+      #   label: 'Vie de la société'
+      #   file: 'assets/content/pages/news.json'
+      #   fields:
+      #     - label: 'Titre'
+      #       name: 'title'
+      #       widget: 'string'
+      #     - label: 'Corps de texte'
+      #       name: 'body'
+      #       <<: *markdown
 
       # PUBLICATIONS - The page including the publications of SFPR members
       - name: 'publications'
         label: 'Publications'
-        file: 'assets/content/pages/publications.json'
+        file: 'src/pages/publications.md'
         fields:
           - label: 'Titre'
             name: 'title'
@@ -112,7 +113,7 @@ collections:
       # EVENTS - The page including the events of SFPR
       - label: 'Évènements'
         name: 'events'
-        file: 'assets/content/pages/events.json'
+        file: 'src/pages/events.md'
         fields:
           - label: 'Titre'
             name: 'title'
@@ -120,30 +121,28 @@ collections:
           - label: 'Corps de texte'
             name: 'body'
             <<: *markdown
-
       # BLOGS - The page including the blogs articles of SFPR
-      - label: 'Articles de blog'
-        name: 'blogs'
-        file: 'assets/content/pages/blogs.json'
-        fields:
-          - label: 'Titre'
-            name: 'title'
-            widget: 'string'
-          - label: 'Corps de texte'
-            name: 'body'
-            <<: *markdown
-
+      # - label: 'Articles de blog'
+      #   name: 'blogs'
+      #   file: 'assets/content/pages/blogs.json'
+      #   fields:
+      #     - label: 'Titre'
+      #       name: 'title'
+      #       widget: 'string'
+      #     - label: 'Corps de texte'
+      #       name: 'body'
+      #       <<: *markdown
       # SEARCH - The search page
-      - label: 'Rechercher'
-        name: 'search'
-        file: 'assets/content/pages/search.json'
-        fields:
-          - label: 'Titre'
-            name: 'title'
-            widget: 'string'
-          - label: 'Nom du champ de recherche'
-            name: 'input_label'
-            widget: 'string'
+      # - label: 'Rechercher'
+      #   name: 'search'
+      #   file: 'assets/content/pages/search.json'
+      #   fields:
+      #     - label: 'Titre'
+      #       name: 'title'
+      #       widget: 'string'
+      #     - label: 'Nom du champ de recherche'
+      #       name: 'input_label'
+      #       widget: 'string'
 
   # ARTICLES - A blog article
   - name: 'article'
@@ -160,7 +159,12 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'blog-post',
+        }
       - label: 'Titre'
         name: 'title'
         widget: 'string'
@@ -292,56 +296,234 @@ collections:
         hint: 'Le texte qui doit apparaître sur le site'
         widget: 'string'
 
-
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'blog-post',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
+      - { label: 'Featured Image', name: 'featuredimage', widget: image }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Landing Page'
+        name: 'index'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: Mainpitch,
+              name: mainpitch,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - { label: Description, name: description, widget: string }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Main,
+              name: main,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Image1,
+                    name: image1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image2,
+                    name: image2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image3,
+                    name: image3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                ],
+            }
+      - file: 'src/pages/about/index.md'
+        label: 'About'
+        name: 'about'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'about-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/products/index.md'
+        label: 'Products Page'
+        name: 'products'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'product-page',
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Main,
+              name: main,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Image1,
+                    name: image1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image2,
+                    name: image2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image3,
+                    name: image3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
+                ],
+            }
+          - { label: Full_image, name: full_image, widget: image }
+          - {
+              label: Pricing,
+              name: pricing,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: string },
+                  {
+                    label: Plans,
+                    name: plans,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Plan, name: plan, widget: string },
+                        { label: Price, name: price, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Items, name: items, widget: list },
+                      ],
+                  },
+                ],
+            }
