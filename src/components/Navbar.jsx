@@ -46,10 +46,14 @@ const LINKS = [
   },
 ]
 
-const Navbar = () => (
+const Navbar = ({ title, intro, cover }) => (
   <div
     className="container is-fluid pt-5 has-text-white"
-    style={{ backgroundImage: `url(${Cover})`, paddingBottom: '6rem' }}
+    style={{
+      backgroundImage: `url(${Cover})`,
+      paddingBottom: '6rem',
+      // marginBottom: '-6rem',
+    }}
   >
     <div className="level pb-6">
       <div className="level-item">
@@ -57,7 +61,7 @@ const Navbar = () => (
       </div>
     </div>
     <h1 className="title is-2 has-text-white has-text-centered mb-6">
-      Société Francophone de Philosophie de la Religion
+      {title}
     </h1>
     <p
       className="subtitle is-6 has-text-white has-text-centered mb-6"

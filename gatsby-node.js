@@ -9,6 +9,32 @@ const logErrors = (errors) => {
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   /**
+   * Create index page
+   */
+  const indexPageQuery = await graphql(`
+    {
+      page: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+        id
+        fields {
+          slug
+        }
+      }
+    }
+  `)
+
+  if (indexPageQuery.errors) return logErrors(indexPageQuery.errors)
+
+  const { page } = indexPageQuery.data
+
+  createPage({
+    path: page.fields.slug,
+    component: path.resolve('src/templates/index-page.jsx'),
+    context: {
+      id: page.id,
+    },
+  })
+
+  /**
    *
    * Create articles
    */

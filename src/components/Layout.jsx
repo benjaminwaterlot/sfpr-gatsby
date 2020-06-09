@@ -1,12 +1,33 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Navbar from './Navbar'
-import './all.sass'
+
+import './all.scss'
+
 import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import { withPrefix, useStaticQuery, graphql } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
+  const {
+    home: { frontmatter: infos },
+  } = useStaticQuery(graphql`
+    query Layout {
+      home: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+        frontmatter {
+          title
+          intro
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <div>
@@ -48,9 +69,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar {...infos} />
       <div>{children}</div>
-      {/* <Footer /> */}
       <div>FOOTER</div>
     </div>
   )

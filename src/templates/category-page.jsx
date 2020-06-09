@@ -3,28 +3,33 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import translate from '../lib/translate'
 
 export const CategoryPageTemplate = ({ body, helmet, title, articles }) => (
   <section className="section">
     {helmet || ''}
+
     <div className="container content">
-      <div className="columns">
-        <div className="column is-10 is-offset-1">
-          <h1 className="title is-1 has-text-weight-bold">{title}</h1>
-          {body}
-          <h2 className="title is-2">Articles</h2>
-          <div className="tile is-ancestor">
-            {articles &&
-              articles.map((article) => (
-                <div key={article.id} className="tile is-parent is-4">
-                  <div className="tile is-child box">
-                    <h3 className="subtitle">{article.frontmatter.title}</h3>
-                    <p>{article.excerpt}</p>
-                  </div>
+      {/* BODY */}
+      <div className="box py-5 px-5">
+        <h1 className="title is-1 has-text-weight-bold">{title}</h1>
+        {body}
+      </div>
+
+      {/* ARTICLES */}
+      <div className="columns is-multiline">
+        {articles &&
+          articles.map((article) => (
+            <div key={article.id} className="column is-6-tablet is-4-desktop">
+              <div className="box">
+                <div className="tag is-grey is-light">
+                  {translate(article.frontmatter.type)}
                 </div>
-              ))}
-          </div>
-        </div>
+                <h3 className="subtitle mt-1">{article.frontmatter.title}</h3>
+                <p>{article.excerpt}</p>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   </section>
@@ -57,8 +62,8 @@ const CategoryPage = ({
       body={<div dangerouslySetInnerHTML={{ __html: body.html }} />}
       helmet={
         <Helmet titleTemplate="%s | Blog">
-          <title>{`${body.frontmatter.title}`}</title>
-          <meta name="description" content={`${body.excerpt}`} />
+          <title>{body.frontmatter.title}</title>
+          <meta name="description" content={body.excerpt} />
         </Helmet>
       }
       articles={articles}
@@ -111,6 +116,7 @@ export const query = graphql`
         excerpt
         frontmatter {
           title
+          type
         }
       }
     }

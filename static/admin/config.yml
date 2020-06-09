@@ -40,27 +40,27 @@ collections:
     #   preview: false
     files:
       # HOME - Home page of SFPR
-      # - name: 'home'
-      #   label: "Page d'accueil"
-      #   file: 'assets/content/pages/home.json'
-      #   fields:
-      #     - name: 'title'
-      #       label: 'Titre du site'
-      #       widget: 'string'
-      #     - name: 'intro'
-      #       label: 'Introduction'
-      #       widget: 'text'
-      #     - name: 'cover'
-      #       label: 'Image de couverture'
-      #       widget: 'image'
-      #     - name: 'featured_article'
-      #       label: 'Article mis en avant'
-      #       required: false
-      #       widget: 'relation'
-      #       collection: 'article'
-      #       searchFields:
-      #         - 'title'
-      #       valueField: 'title'
+      - name: 'home'
+        label: "Page d'accueil"
+        file: 'src/pages/index.md'
+        fields:
+          - name: 'title'
+            label: 'Titre du site'
+            widget: 'string'
+          - name: 'intro'
+            label: 'Introduction'
+            widget: 'text'
+          - name: 'cover'
+            label: 'Image de couverture'
+            widget: 'image'
+          - name: 'featured_article'
+            label: 'Article mis en avant'
+            required: false
+            widget: 'relation'
+            collection: 'article'
+            searchFields:
+              - 'title'
+            valueField: 'title'
 
       # ABOUT US - The page describing the SFPR team
       # - name: 'about-us'
@@ -274,7 +274,7 @@ collections:
     label: 'Textes'
     label_singular: 'Texte'
     description: 'Les textes utilisés partout sur le site.'
-    folder: 'assets/content/translations'
+    folder: 'src/content/translations'
     format: 'json'
     create: true
     editor:
@@ -284,13 +284,8 @@ collections:
     fields:
       - name: 'key'
         label: 'Clé'
-        widget: 'string'
-        hint: '[NE PAS MODIFIER]'
-        pattern:
-          [
-            '^[a-z]+$',
-            'Cette clé ne peut contenir que des minuscules non-accentuées.',
-          ]
+        widget: 'hidden'
+        default: 'key'
       - name: 'text'
         label: 'Texte'
         hint: 'Le texte qui doit apparaître sur le site'
