@@ -29,18 +29,6 @@ const LINKS = [
     route: '/blogs',
   },
   {
-    label: 'About',
-    route: '/about',
-  },
-  {
-    label: 'Products',
-    route: '/products',
-  },
-  {
-    label: 'Blog',
-    route: '/blog',
-  },
-  {
     label: 'Contact',
     route: '/contact',
   },

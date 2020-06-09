@@ -7,6 +7,7 @@ const CategoryPagePreview = ({ entry, widgetFor }) => {
     <CategoryPageTemplate
       body={widgetFor('body')}
       title={entry.getIn(['data', 'title'])}
+      articles={[]}
     />
   )
 }
