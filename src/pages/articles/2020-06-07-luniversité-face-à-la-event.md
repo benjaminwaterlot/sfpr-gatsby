@@ -13,6 +13,4 @@ XXXVème **Congrès** de l’ASPLF à Rabat (Maroc) du 26 au 30 août 2014 organ
 \
 Pour de plus amples informations sur le programme : http://asplf.org/index.html\n
 
-
-
-fou !
+fou ! de fou !
