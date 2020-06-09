@@ -3,7 +3,7 @@ templateKey: article
 title: L'université face à la mystique
 type: publication
 picture:
-  display: cover
+  display: embed
   src: /img/home-jumbotron.jpg
 date: 2020-06-07T00:00:00.000Z
 settings:

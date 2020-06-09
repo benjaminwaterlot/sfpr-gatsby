@@ -52,7 +52,7 @@ const Navbar = ({ title, intro, cover }) => (
     style={{
       backgroundImage: `url(${Cover})`,
       paddingBottom: '6rem',
-      // marginBottom: '-6rem',
+      marginBottom: '-6rem',
     }}
   >
     <div className="level pb-6">

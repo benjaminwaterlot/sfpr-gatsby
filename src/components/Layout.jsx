@@ -70,7 +70,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar {...infos} />
-      <div>{children}</div>
+      <section className="section">{children}</section>
       <div>FOOTER</div>
     </div>
   )

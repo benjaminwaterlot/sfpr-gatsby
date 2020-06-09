@@ -3,36 +3,22 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import translate from '../lib/translate'
+import CardGrid from '../components/CardGrid'
 
 export const CategoryPageTemplate = ({ body, helmet, title, articles }) => (
-  <section className="section">
+  <div className="container content">
     {helmet || ''}
-
-    <div className="container content">
-      {/* BODY */}
-      <div className="box py-5 px-5">
-        <h1 className="title is-1 has-text-weight-bold">{title}</h1>
-        {body}
-      </div>
-
-      {/* ARTICLES */}
-      <div className="columns is-multiline">
-        {articles &&
-          articles.map((article) => (
-            <div key={article.id} className="column is-6-tablet is-4-desktop">
-              <div className="box">
-                <div className="tag is-grey is-light">
-                  {translate(article.frontmatter.type)}
-                </div>
-                <h3 className="subtitle mt-1">{article.frontmatter.title}</h3>
-                <p>{article.excerpt}</p>
-              </div>
-            </div>
-          ))}
-      </div>
+    {/* BODY */}
+    <div className="box py-5 px-5">
+      <h1 className="title is-1 has-text-weight-bold">{title}</h1>
+      {body}
     </div>
-  </section>
+
+    {/* ARTICLES */}
+    <div className="columns is-multiline">
+      <CardGrid articles={articles} />
+    </div>
+  </div>
 )
 
 CategoryPageTemplate.propTypes = {
@@ -112,12 +98,7 @@ export const query = graphql`
       filter: { frontmatter: { type: { eq: $articles } } }
     ) {
       nodes {
-        id
-        excerpt
-        frontmatter {
-          title
-          type
-        }
+        ...ArticleExcerpt
       }
     }
   }

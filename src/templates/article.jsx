@@ -6,19 +6,13 @@ import Layout from '../components/Layout'
 
 export const ArticleTemplate = ({ body, title, helmet }) => {
   return (
-    <section className="section">
+    <div className="container box py-6 px-6">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            {body}
-          </div>
-        </div>
-      </div>
-    </section>
+      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        {title}
+      </h1>
+      {body}
+    </div>
   )
 }
 

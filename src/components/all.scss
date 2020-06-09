@@ -1,10 +1,41 @@
 @import '~bulma/sass/utilities/initial-variables';
 
-// Config vars
-$primary: #26a8ed;
-$primary-invert: white;
-$body-color: #586b74;
+// COLORS
+$black-bis: hsl(0, 0%, 14%);
+$black-ter: #2c363a;
+$grey-darker: #3e4b51;
+$grey-dark: #586b74;
+$grey-light: #738a94;
+$grey-lighter: #92a3ab;
+$white-ter: #e6eaeb;
+$white-bis: #f3f5f6;
+
 $black: #1b2023;
-$body-background-color: $white-ter;
+$blue: #26a8ed;
+
+// Config vars
+$primary: $blue;
+$primary-invert: white;
+$body-color: $grey-darker;
+$body-background-color: $white-bis;
+$text: $grey-darker;
 
 @import '~bulma';
+
+.overline {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: $size-small;
+}
+
+.is-full-height {
+  height: 100%;
+}
+
+.is-interactive {
+  transition: all 0.2s $easing;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
