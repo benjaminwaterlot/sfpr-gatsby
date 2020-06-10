@@ -19,11 +19,11 @@ const Navbar = ({ title, intro, cover }) => (
         <img src={Logo} alt="Logo de la SFPR" style={{ width: '88px' }} />
       </div>
     </div>
-    <h1 className="title is-2 has-text-white has-text-centered mb-6">
+    <h1 className="title is-2 has-text-white has-text-centered mb-7">
       {title}
     </h1>
     <p
-      className="subtitle is-6 has-text-white has-text-centered mb-6"
+      className="subtitle is-6 has-text-white has-text-centered mb-9"
       style={{ maxWidth: 700, marginLeft: 'auto', marginRight: 'auto' }}
     >
       {intro}
@@ -59,7 +59,7 @@ const Navbar = ({ title, intro, cover }) => (
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   intro: PropTypes.string.isRequired,
-  cover: PropTypes.string.isRequired,
+  cover: PropTypes.object.isRequired,
 }
 
 export default Navbar

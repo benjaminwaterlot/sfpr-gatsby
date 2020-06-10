@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import translate from '../lib/translate'
 import { Link } from 'gatsby'
-import { formatDate } from '../lib/format'
 import { markdownRemarkType } from '../lib/prop-types'
+import ArticleOverline from './ArticleOverline'
 
 const Card = ({
   article: {
@@ -27,10 +26,7 @@ const Card = ({
         )}
 
         <div className="card-content">
-          <div className="overline has-text-grey-lighter">
-            <strong>{translate(type)} </strong>
-            <span className="has-text-weight-medium">| {formatDate(date)}</span>
-          </div>
+          <ArticleOverline {...{ type, date }} />
           <h3 className="title is-5 mt-1">{title}</h3>
           <div>
             {picture.src && picture.display === 'embed' && (

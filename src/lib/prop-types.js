@@ -9,7 +9,7 @@ export const markdownRemarkType = PropTypes.shape({
   }),
   frontmatter: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    cover: PropTypes.string,
+    cover: PropTypes.object,
     intro: PropTypes.string,
     featured_article: PropTypes.string,
     picture: PropTypes.shape({
