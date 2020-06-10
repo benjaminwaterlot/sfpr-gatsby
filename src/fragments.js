@@ -14,7 +14,7 @@ export const articleExcerpt = graphql`
         display
         src {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 500, quality: 60) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -24,3 +24,5 @@ export const articleExcerpt = graphql`
     }
   }
 `
+
+// export const

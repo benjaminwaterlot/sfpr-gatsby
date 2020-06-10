@@ -1,6 +1,7 @@
 @import '~bulma/sass/utilities/initial-variables';
 
-// COLORS
+// Colors
+$black: #1b2023;
 $black-bis: hsl(0, 0%, 14%);
 $black-ter: #2c363a;
 $grey-darker: #3e4b51;
@@ -10,15 +11,19 @@ $grey-lighter: #92a3ab;
 $white-ter: #e6eaeb;
 $white-bis: #f3f5f6;
 
-$black: #1b2023;
 $blue: #26a8ed;
 
-// Config vars
+// Color theme
 $primary: $blue;
 $primary-invert: white;
+
+// Color use
 $body-color: $grey-darker;
 $body-background-color: $white-bis;
 $text: $grey-darker;
+
+// Pagination
+$pagination-disabled-color: $white-bis;
 
 @import '~bulma';
 

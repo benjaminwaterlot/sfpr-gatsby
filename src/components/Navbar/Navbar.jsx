@@ -1,44 +1,15 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Cover from '../img/app-cover.jpg'
-import Logo from '../img/app-logo.png'
+import PropTypes from 'prop-types'
 
-const LINKS = [
-  {
-    label: 'Accueil',
-    route: '/',
-  },
-  {
-    label: 'Qui sommes-nous ?',
-    route: '/about-us',
-  },
-  {
-    label: 'Vie de la société',
-    route: '/news',
-  },
-  {
-    label: 'Événements',
-    route: '/events',
-  },
-  {
-    label: 'Publications',
-    route: '/publications',
-  },
-  {
-    label: 'Blogs',
-    route: '/blogs',
-  },
-  {
-    label: 'Contact',
-    route: '/contact',
-  },
-]
+import { Link } from 'gatsby'
+import Logo from '../../img/app-logo.png'
+import LINKS from './navbar-links'
 
 const Navbar = ({ title, intro, cover }) => (
   <div
     className="container is-fluid pt-5 has-text-white"
     style={{
-      backgroundImage: `url(${Cover})`,
+      backgroundImage: `url(${cover.childImageSharp.fluid.src})`,
       paddingBottom: '6rem',
       marginBottom: '-6rem',
     }}
@@ -55,9 +26,7 @@ const Navbar = ({ title, intro, cover }) => (
       className="subtitle is-6 has-text-white has-text-centered mb-6"
       style={{ maxWidth: 700, marginLeft: 'auto', marginRight: 'auto' }}
     >
-      La Société Francophone de Philosophie de la Religion a pour but de
-      promouvoir les recherches philosophiques universitaires sur les religions
-      et l'expérience religieuse.
+      {intro}
     </p>
     <nav role="navigation" aria-label="main-navigation">
       <div>
@@ -86,5 +55,11 @@ const Navbar = ({ title, intro, cover }) => (
     </nav>
   </div>
 )
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  intro: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+}
 
 export default Navbar

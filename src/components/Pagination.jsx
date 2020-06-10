@@ -3,7 +3,11 @@ import { Link } from 'gatsby'
 
 const Pagination = ({ currentPage, numberOfPages, createUrl }) => {
   return (
-    <nav className="pagination" role="navigation" aria-label="pagination">
+    <nav
+      className="pagination is-rounded"
+      role="navigation"
+      aria-label="pagination"
+    >
       <Link
         to={createUrl(currentPage - 1)}
         className="pagination-previous"
