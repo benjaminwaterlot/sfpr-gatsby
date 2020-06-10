@@ -11,9 +11,7 @@ export const ArticleTemplate = ({ body, title, helmet, cover, type, date }) => (
   <div className="container box py-6 px-6">
     {helmet || ''}
     <ArticleOverline {...{ type, date }} />
-    <h1 className="title is-size-2 has-text-weight-bold is-bold-light mt-2">
-      {title}
-    </h1>
+    <h1 className="title is-size-2 is-bold-light mt-2">{title}</h1>
     {cover.src && cover.display === 'cover' && (
       <Image
         fluid={cover.src.childImageSharp.fluid}

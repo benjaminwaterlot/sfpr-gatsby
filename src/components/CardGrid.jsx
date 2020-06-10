@@ -3,15 +3,24 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { markdownRemarkType } from '../lib/prop-types'
 import ArticleOverline from './ArticleOverline'
+import Image from 'gatsby-image'
 
 const Card = ({
   article: {
     fields,
     excerpt,
     frontmatter: { picture, type, date, title },
+    isFeatured,
   },
 }) => (
-  <div className="column is-6-tablet is-4-desktop">
+  <div
+    className={(() => {
+      const tablet = isFeatured ? 12 : 6
+      const widescreen = isFeatured ? 8 : 4
+
+      return `column is-${tablet}-tablet is-${widescreen}-widescreen`
+    })()}
+  >
     <Link to={fields.slug}>
       <div
         className="card is-full-height is-interactive"
@@ -19,9 +28,10 @@ const Card = ({
       >
         {picture.src && picture.display === 'cover' && (
           <div className="card-image">
-            <figure className="image is-16by9">
-              <img src={picture.src.childImageSharp.fluid.src} />
-            </figure>
+            <Image
+              fluid={picture.src.childImageSharp.fluid}
+              style={{ height: isFeatured ? 300 : 220 }}
+            />
           </div>
         )}
 
@@ -30,9 +40,9 @@ const Card = ({
           <h3 className="title is-5 mt-1">{title}</h3>
           <div>
             {picture.src && picture.display === 'embed' && (
-              <img
+              <Image
                 className="mr-2 my-1"
-                src={picture.src.childImageSharp.fluid.src}
+                fluid={picture.src.childImageSharp.fluid}
                 style={{ cssFloat: 'left', width: '40%' }}
               />
             )}

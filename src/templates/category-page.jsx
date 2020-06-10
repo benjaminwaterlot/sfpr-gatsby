@@ -4,18 +4,36 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CardGrid from '../components/CardGrid'
+import Pagination from '../components/Pagination'
 
-export const CategoryPageTemplate = ({ body, helmet, title, articles }) => (
+export const CategoryPageTemplate = ({
+  body,
+  helmet,
+  title,
+  articles,
+  pageContext,
+}) => (
   <div className="container">
     {helmet || ''}
     {/* BODY */}
     <div className="box py-6 px-6">
-      <h1 className="title is-1 has-text-weight-bold">{title}</h1>
+      <h1 className="title is-1">{title}</h1>
       {body}
     </div>
-
     {/* ARTICLES */}
     <CardGrid articles={articles} />
+    {/* PAGINATION */}
+    {pageContext && pageContext.numberOfPages > 1 && (
+      <div>
+        <Pagination
+          createUrl={(page) =>
+            page === 1 ? pageContext.slug : `${pageContext.slug}${page}`
+          }
+          currentPage={pageContext.currentPage}
+          numberOfPages={pageContext.numberOfPages}
+        />
+      </div>
+    )}{' '}
   </div>
 )
 
@@ -39,6 +57,7 @@ const CategoryPage = ({
     body,
     articles: { nodes: articles },
   },
+  pageContext,
 }) => (
   <Layout>
     <CategoryPageTemplate
@@ -51,6 +70,7 @@ const CategoryPage = ({
         </Helmet>
       }
       articles={articles}
+      pageContext={pageContext}
     />
   </Layout>
 )
@@ -82,7 +102,12 @@ CategoryPage.propTypes = {
 export default CategoryPage
 
 export const query = graphql`
-  query PageQuery($id: String!, $articles: String!) {
+  query PageQuery(
+    $id: String!
+    $articlesType: String!
+    $from: Int!
+    $itemsPerPage: Int!
+  ) {
     body: markdownRemark(id: { eq: $id }) {
       id
       excerpt
@@ -93,7 +118,9 @@ export const query = graphql`
     }
 
     articles: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: $articles } } }
+      filter: { frontmatter: { type: { eq: $articlesType } } }
+      limit: $itemsPerPage
+      skip: $from
     ) {
       nodes {
         ...ArticleExcerpt

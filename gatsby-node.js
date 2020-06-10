@@ -7,6 +7,33 @@ const logErrors = (errors) => {
   return Promise.reject(errors)
 }
 
+const paginate = ({
+  createPage,
+  itemsNumber,
+  itemsPerPage,
+  getPath,
+  component,
+  context,
+}) => {
+  const numberOfPages = Math.ceil(itemsNumber / itemsPerPage)
+
+  Array(numberOfPages)
+    .fill()
+    .forEach((_, idx) => {
+      createPage({
+        path: getPath(idx + 1),
+        component,
+        context: {
+          itemsPerPage: itemsPerPage,
+          currentPage: idx + 1,
+          from: idx * itemsPerPage,
+          numberOfPages,
+          ...context,
+        },
+      })
+    })
+}
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const articlesQuery = await graphql(`
     {
@@ -18,6 +45,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           id
           fields {
             slug
+          }
+          frontmatter {
+            type
           }
         }
       }
@@ -38,6 +68,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         fields {
           slug
         }
+        frontmatter {
+          featured_article
+        }
       }
     }
   `)
@@ -45,26 +78,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   if (indexPageQuery.errors) return logErrors(indexPageQuery.errors)
 
   const { page } = indexPageQuery.data
-  const ITEMS_PER_PAGE = 3
-
-  const numberOfPages = Math.ceil(articleNodes.length / ITEMS_PER_PAGE)
-
-  Array(numberOfPages)
-    .fill()
-    .forEach((_, idx) => {
-      createPage({
-        path:
-          idx === 0 ? `${page.fields.slug}` : `${page.fields.slug}${idx + 1}`,
-        component: path.resolve('src/templates/index-page.jsx'),
-        context: {
-          id: page.id,
-          from: idx * ITEMS_PER_PAGE,
-          currentPage: idx + 1,
-          numberOfPages,
-          itemsPerPage: ITEMS_PER_PAGE,
-        },
-      })
-    })
+  paginate({
+    createPage,
+    itemsNumber: articleNodes.length,
+    itemsPerPage: 12,
+    getPath: (page) => (page === 1 ? `/` : `/${page}`),
+    component: path.resolve('src/templates/index-page.jsx'),
+    context: {
+      id: page.id,
+      featured: page.frontmatter.featured_article,
+    },
+  })
 
   /**
    *
@@ -109,15 +133,33 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const categoryNodes = categoryPagesQuery.data.allMarkdownRemark.nodes
 
   categoryNodes.forEach((categoryPage) => {
-    createPage({
-      path: categoryPage.fields.slug,
-      component: path.resolve(`src/templates/category-page.jsx`),
+    const articles = articleNodes.filter(
+      (article) =>
+        article.frontmatter.type === categoryPage.frontmatter.contains,
+    )
+
+    paginate({
+      createPage,
+      itemsNumber: articles.length,
+      itemsPerPage: 12,
+      getPath: (page) => `${categoryPage.fields.slug}${page === 1 ? '' : page}`,
+      component: path.resolve('src/templates/category-page.jsx'),
       context: {
-        slug: categoryPage.fields.slug,
         id: categoryPage.id,
-        articles: categoryPage.frontmatter.contains,
+        slug: categoryPage.fields.slug,
+        articlesType: categoryPage.frontmatter.contains,
       },
     })
+
+    //   createPage({
+    //     path: categoryPage.fields.slug,
+    //     component: path.resolve(`src/templates/category-page.jsx`),
+    //     context: {
+    //       slug: categoryPage.fields.slug,
+    //       id: categoryPage.id,
+    //       articles: categoryPage.frontmatter.contains,
+    //     },
+    //   })
   })
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CardGrid from '../components/CardGrid'
@@ -8,29 +8,47 @@ import Pagination from '../components/Pagination'
 const IndexPage = ({
   data: {
     articles: { nodes: articles },
+    featured,
   },
-  pageContext,
-}) => {
-  return (
-    <Layout>
-      <div className="container">
-        <CardGrid articles={articles} />
-        <div>
-          <Pagination
-            createUrl={(page) => (page === 1 ? '/' : `/${page}`)}
-            currentPage={pageContext.currentPage}
-            numberOfPages={pageContext.numberOfPages}
-          />
-        </div>
+  pageContext: { currentPage, numberOfPages, featured: featuredId },
+}) => (
+  <Layout>
+    <div className="container">
+      <CardGrid
+        articles={
+          currentPage === 1 && featured
+            ? [
+                { ...featured, isFeatured: true },
+                ...articles.filter(
+                  ({ frontmatter: { title } }) =>
+                    title !== featured?.frontmatter.title,
+                ),
+              ]
+            : articles.filter(
+                ({ frontmatter: { title } }) =>
+                  title !== featured?.frontmatter.title,
+              )
+        }
+      />
+      <div>
+        <Pagination
+          createUrl={(page) => (page === 1 ? '/' : `/${page}`)}
+          currentPage={currentPage}
+          numberOfPages={numberOfPages}
+        />
       </div>
-    </Layout>
-  )
-}
+    </div>
+  </Layout>
+)
 
 export default IndexPage
 
 export const pageQuery = graphql`
-  query Articles($from: Int!, $itemsPerPage: Int!) {
+  query Articles($from: Int!, $itemsPerPage: Int!, $featured: String) {
+    featured: markdownRemark(frontmatter: { title: { eq: $featured } }) {
+      ...ArticleExcerpt
+    }
+
     articles: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "article" } } }
       limit: $itemsPerPage
