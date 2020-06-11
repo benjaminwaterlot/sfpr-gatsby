@@ -4,6 +4,6 @@ templateKey: index-page
 intro: La Société Francophone de Philosophie de la Religion a pour but de
   promouvoir les recherches philosophiques universitaires sur les religions et
   l'expérience religieuse.
-cover: /img/app-cover.jpg
-featured_article: ''
+cover: /img/colloque-hermeneutique-et-metaphysique.png
+featured_article: ""
 ---
