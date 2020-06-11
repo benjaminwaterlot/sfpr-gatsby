@@ -26,7 +26,7 @@ const Card = ({
         className="card is-full-height is-interactive"
         style={{ borderRadius: 6, overflow: 'hidden' }}
       >
-        {picture.src && picture.display === 'cover' && (
+        {picture?.src && picture.display === 'cover' && (
           <div className="card-image">
             <Image
               fluid={picture.src.childImageSharp.fluid}
@@ -39,7 +39,7 @@ const Card = ({
           <ArticleOverline {...{ type, date }} />
           <h3 className="title is-5 mt-1">{title}</h3>
           <div>
-            {picture.src && picture.display === 'embed' && (
+            {picture?.src && picture.display === 'embed' && (
               <Image
                 className="mr-2 my-1"
                 fluid={picture.src.childImageSharp.fluid}

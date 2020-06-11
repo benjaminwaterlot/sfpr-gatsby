@@ -232,22 +232,28 @@ collections:
     label: 'Sociétaires'
     label_singular: 'Sociétaire'
     description: 'La liste des sociétaires de la SFPR'
-    identifier_field: 'name'
-    format: 'json'
-    folder: 'assets/content/members'
+    identifier_field: 'lastName'
+    # format: 'json'
+    folder: 'src/content/members'
     create: true
     slug: '{{fields.firstName}}-{{fields.lastName}}'
     summary: '{{fields.firstName}} {{fields.lastName}}'
     editor:
       preview: false
     fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'member',
+        }
       - name: 'firstName'
         label: 'Prénom'
         widget: 'string'
       - name: 'lastName'
         label: 'Nom de famille'
         widget: 'string'
-      - name: 'picture'
+      - name: 'portrait'
         label: 'Photo'
         widget: 'image'
         required: false

@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CardGrid from '../components/CardGrid'
 import Pagination from '../components/Pagination'
+import WhiteBox from '../components/WhiteBox'
 
 export const CategoryPageTemplate = ({
   body,
@@ -14,12 +15,12 @@ export const CategoryPageTemplate = ({
   pageContext,
 }) => (
   <div className="container">
-    {helmet || ''}
-    {/* BODY */}
-    <div className="box py-6 px-6">
+    <WhiteBox>
+      {/* BODY */}
+      {helmet || ''}
       <h1 className="title is-1">{title}</h1>
       <div className="markdown content">{body}</div>
-    </div>
+    </WhiteBox>
     {/* ARTICLES */}
     <CardGrid articles={articles} />
     {/* PAGINATION */}

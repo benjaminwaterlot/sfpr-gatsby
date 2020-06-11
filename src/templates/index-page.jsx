@@ -45,7 +45,9 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query Articles($from: Int!, $itemsPerPage: Int!, $featured: String) {
-    featured: markdownRemark(frontmatter: { title: { eq: $featured } }) {
+    featured: markdownRemark(
+      frontmatter: { templateKey: { eq: "article" }, title: { eq: $featured } }
+    ) {
       ...ArticleExcerpt
     }
 
