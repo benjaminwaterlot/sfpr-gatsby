@@ -9,7 +9,7 @@ const Navbar = ({ title, intro, cover }) => (
   <div
     className="container is-fluid pt-5 has-text-white"
     style={{
-      backgroundImage: `url(${cover.childImageSharp.fluid.src})`,
+      backgroundImage: `url(${cover.childImageSharp?.fluid.src || cover})`,
       paddingBottom: '6rem',
       marginBottom: '-6rem',
     }}

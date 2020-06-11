@@ -1,17 +1,15 @@
 import CMS from 'netlify-cms-app'
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-// import cloudinary from 'netlify-cms-media-library-cloudinary'
+
+import ArticlePreview from './preview-templates/ArticlePreview.jsx'
+import NavbarPreview from './preview-templates/NavbarPreview.jsx'
 
 import CategoryPagePreview from './preview-templates/CategoryPagePreview.jsx'
 
-// CMS.registerMediaLibrary(uploadcare)
-// CMS.registerMediaLibrary(cloudinary)
+const CATEGORIES = ['events', 'publications', 'blogs', 'news']
 
-/**
- * Category pages
- */
-CMS.registerPreviewTemplate('events', CategoryPagePreview)
-CMS.registerPreviewTemplate('publications', CategoryPagePreview)
-// CMS.registerPreviewTemplate('events', CategoryPagePreview)
-// CMS.registerPreviewTemplate('events', CategoryPagePreview)
-// CMS.registerPreviewTemplate('events', CategoryPagePreview)
+CATEGORIES.forEach((category) => {
+  CMS.registerPreviewTemplate(category, CategoryPagePreview)
+})
+
+CMS.registerPreviewTemplate('home', NavbarPreview)
+CMS.registerPreviewTemplate('article', ArticlePreview)

@@ -4,29 +4,18 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import { markdownRemarkType } from '../lib/prop-types'
-import Image from 'gatsby-image'
 import ArticleOverline from '../components/ArticleOverline'
+import Image from '../components/Image'
 
 export const ArticleTemplate = ({ body, title, helmet, cover, type, date }) => (
-  <div className="container box py-6 px-6">
+  <div className="container box pt-6 pb-10 px-6">
     {helmet || ''}
     <ArticleOverline {...{ type, date }} />
     <h1 className="title is-size-2 is-bold-light mt-2">{title}</h1>
-    {cover.src && cover.display === 'cover' && (
-      <Image
-        fluid={cover.src.childImageSharp.fluid}
-        style={{ maxHeight: 380 }}
-        className="my-6"
-      />
-    )}
-    {cover.src && cover.display === 'embed' && (
-      <Image
-        fluid={cover.src.childImageSharp.fluid}
-        style={{ cssFloat: 'left', width: '33%' }}
-        className="mr-5"
-      />
-    )}
-    {body}
+
+    {cover.src && <Image picture={cover} coverClass="my-6" embedClass="mr-5" />}
+
+    <div className="markdown">{body}</div>
   </div>
 )
 

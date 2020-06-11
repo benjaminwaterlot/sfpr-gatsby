@@ -18,7 +18,7 @@ export const CategoryPageTemplate = ({
     {/* BODY */}
     <div className="box py-6 px-6">
       <h1 className="title is-1">{title}</h1>
-      {body}
+      <div className="markdown content">{body}</div>
     </div>
     {/* ARTICLES */}
     <CardGrid articles={articles} />
@@ -33,7 +33,7 @@ export const CategoryPageTemplate = ({
           numberOfPages={pageContext.numberOfPages}
         />
       </div>
-    )}{' '}
+    )}
   </div>
 )
 

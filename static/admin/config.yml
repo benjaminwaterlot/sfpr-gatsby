@@ -158,8 +158,8 @@ collections:
     slug: '{{fields.date}}-{{slug}}'
     preview_path: 'articles/{{slug}}'
     summary: '{{month}}/{{year}} - {{fields.title}}'
-    editor:
-      preview: false
+    # editor:
+    #   preview: false
     fields:
       - {
           label: 'Template Key',

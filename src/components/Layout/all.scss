@@ -40,9 +40,30 @@ $spacing-values: (
   '7': 3rem,
   '8': 4rem,
   '9': 5.5rem,
+  '10': 7.5rem,
 );
 
 @import '~bulma';
+
+// MARKDOWN
+.markdown {
+  h1 {
+    @extend .title;
+    @extend .is-2;
+  }
+
+  h2 {
+    @extend .title;
+    @extend .is-3;
+  }
+
+  h3 {
+    @extend .title;
+    @extend .is-4;
+  }
+}
+
+// OTHER STYLES
 
 .overline {
   text-transform: uppercase;
