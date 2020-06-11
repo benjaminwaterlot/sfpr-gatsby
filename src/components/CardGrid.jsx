@@ -15,10 +15,10 @@ const Card = ({
 }) => (
   <div
     className={(() => {
-      const tablet = isFeatured ? 12 : 6
-      const widescreen = isFeatured ? 8 : 4
+      const tablet = isFeatured ? `is-12-tablet` : `is-6-tablet`
+      const widescreen = isFeatured ? `is-8-widescreen` : `is-4-widescreen`
 
-      return `column is-${tablet}-tablet is-${widescreen}-widescreen`
+      return `column ${tablet} ${widescreen}`
     })()}
   >
     <Link to={fields.slug}>
