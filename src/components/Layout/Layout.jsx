@@ -4,7 +4,7 @@ import Navbar from '../Navbar'
 
 import './all.scss'
 
-import { withPrefix } from 'gatsby'
+// import { withPrefix } from 'gatsby'
 import useLayoutQuery from './use-layout-query'
 
 const TemplateWrapper = ({ children }) => {
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{siteMetadata.title}</title>
         <meta name="description" content={siteMetadata.description} />
 
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
@@ -42,16 +42,16 @@ const TemplateWrapper = ({ children }) => {
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
-        />
+        /> */}
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={siteMetadata.title} />
         <meta property="og:url" content="/" />
-        <meta
+        {/* <meta
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        /> */}
       </Helmet>
       <Navbar {...infos} />
       <section className="section">{children}</section>
