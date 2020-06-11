@@ -38,7 +38,7 @@ const Card = ({
         <div className="card-content">
           <ArticleOverline {...{ type, date }} />
           <h3 className="title is-5 mt-1">{title}</h3>
-          <div>
+          <div className="overflow-auto">
             {picture?.src && picture.display === 'embed' && (
               <Image
                 className="mr-2 my-1"
