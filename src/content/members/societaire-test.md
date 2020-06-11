@@ -2,7 +2,7 @@
 templateKey: member
 firstName: Societaire
 lastName: Test
-portrait: /img/app-cover.jpg
+portrait: /img/colloque-hermeneutique-et-metaphysique.png
 roles:
   - FOUNDER
 job: test
