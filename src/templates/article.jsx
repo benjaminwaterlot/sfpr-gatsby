@@ -15,7 +15,7 @@ export const ArticleTemplate = ({ body, title, helmet, cover, type, date }) => (
 
     {cover.src && <Image picture={cover} coverClass="my-6" embedClass="mr-5" />}
 
-    <div className="markdown">{body}</div>
+    <div className="markdown content">{body}</div>
   </div>
 )
 
