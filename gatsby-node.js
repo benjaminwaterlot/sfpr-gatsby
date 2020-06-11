@@ -15,7 +15,7 @@ const paginate = ({
   component,
   context,
 }) => {
-  const numberOfPages = Math.ceil(itemsNumber / itemsPerPage)
+  const numberOfPages = Math.ceil(itemsNumber / itemsPerPage) || 1
 
   Array(numberOfPages)
     .fill()
