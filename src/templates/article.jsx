@@ -8,14 +8,18 @@ import ArticleOverline from '../components/ArticleOverline'
 import Image from '../components/Image'
 
 export const ArticleTemplate = ({ body, title, helmet, cover, type, date }) => (
-  <div className="container box pt-6 pb-10 px-6 overflow-auto">
+  <div className="container box pt-7 px-7 pb-10 overflow-auto">
     {helmet || ''}
     <ArticleOverline {...{ type, date }} />
     <h1 className="title is-size-2 is-bold-light mt-2">{title}</h1>
 
     <div>
       {cover.src && (
-        <Image picture={cover} coverClass="my-6" embedClass="mr-5" />
+        <Image
+          picture={cover}
+          className={cover.display === 'cover' ? 'my-6' : 'mr-5'}
+          height={380}
+        />
       )}
 
       <div className="markdown content">{body}</div>

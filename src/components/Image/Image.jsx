@@ -1,44 +1,50 @@
 import React from 'react'
 import GatsbyImage from 'gatsby-image'
 
-const FluidImage = ({ picture, coverClass, embedClass }) => (
-  <GatsbyImage
-    fluid={picture.src.childImageSharp.fluid}
-    style={
-      picture.display === 'cover'
-        ? { maxHeight: 380 }
-        : { cssFloat: 'left', width: '33%' }
-    }
-    className={picture.display === 'cover' ? coverClass : embedClass}
-  />
-)
-
-const PreviewImage = ({ picture, coverClass, embedClass }) =>
-  picture.display === 'cover' ? (
+const CoverImage = ({ src, className, height, width, style }) =>
+  src.childImageSharp ? (
+    <GatsbyImage
+      fluid={src.childImageSharp.fluid}
+      style={{ height, width, ...style }}
+      className={className}
+    />
+  ) : (
     <div
       style={{
-        backgroundImage: `url(${picture.src})`,
+        backgroundImage: `url(${src})`,
         backgroundSize: 'cover',
-        height: 220,
+        backgroundPosition: 'center center',
+        height: height,
+        ...style,
       }}
-      className={picture.display === 'cover' ? coverClass : embedClass}
+      className={className}
+    />
+  )
+
+const EmbedImage = ({ src, className, width, style }) =>
+  src.childImageSharp ? (
+    <GatsbyImage
+      fluid={src.childImageSharp.fluid}
+      style={{ cssFloat: 'left', width, ...style }}
+      className={className}
     />
   ) : (
     <img
-      src={picture.src}
-      className={embedClass}
+      src={src}
+      className={className}
       style={{
         cssFloat: 'left',
-        width: '33%',
+        width,
+        ...style,
       }}
     />
   )
 
-const Image = (props) =>
-  props.picture.src.childImageSharp ? (
-    <FluidImage {...props} />
+const Image = ({ picture, ...rest }) =>
+  picture?.display === 'embed' ? (
+    <EmbedImage src={picture.src} {...rest} />
   ) : (
-    <PreviewImage {...props} />
+    <CoverImage src={picture.src || picture} {...rest} />
   )
 
 export default Image

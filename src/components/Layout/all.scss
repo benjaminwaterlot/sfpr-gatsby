@@ -86,3 +86,10 @@ $spacing-values: (
 .overflow-auto {
   overflow: auto;
 }
+
+@include mobile {
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
