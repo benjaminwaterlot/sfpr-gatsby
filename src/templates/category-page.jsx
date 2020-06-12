@@ -122,6 +122,7 @@ export const query = graphql`
       filter: { frontmatter: { type: { eq: $articlesType } } }
       limit: $itemsPerPage
       skip: $from
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         ...ArticleExcerpt

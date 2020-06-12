@@ -16,7 +16,7 @@ export default () =>
           intro
           cover {
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 20) {
+              fluid(maxWidth: 2048, quality: 80) {
                 ...GatsbyImageSharpFluid
               }
             }

@@ -18,7 +18,7 @@ export const ArticleTemplate = ({ body, title, helmet, cover, type, date }) => (
         <Image
           picture={cover}
           className={cover.display === 'cover' ? 'my-6' : 'mr-5'}
-          height={380}
+          {...(cover.display === 'cover' ? { height: 380 } : { width: '33%' })}
         />
       )}
 

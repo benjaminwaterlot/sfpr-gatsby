@@ -6,6 +6,7 @@ import './all.scss'
 
 // import { withPrefix } from 'gatsby'
 import useLayoutQuery from './use-layout-query'
+import Footer from '../Footer'
 
 const TemplateWrapper = ({ children }) => {
   const {
@@ -55,6 +56,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar {...infos} />
       <section className="section">{children}</section>
+      <Footer cover={infos.cover} />
     </div>
   )
 }

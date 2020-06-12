@@ -55,6 +55,7 @@ export const pageQuery = graphql`
       filter: { frontmatter: { templateKey: { eq: "article" } } }
       limit: $itemsPerPage
       skip: $from
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         ...ArticleExcerpt

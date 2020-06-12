@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Logo from '../../img/app-logo.png'
 import LINKS from './navbar-links'
+import BackgroundImage from 'gatsby-background-image'
 
 const Navbar = ({ title, intro, cover }) => (
-  <div
+  <BackgroundImage
     className="container is-fluid pt-5 has-text-white"
+    fluid={cover?.childImageSharp?.fluid}
     style={{
-      backgroundImage: `url(${cover?.childImageSharp?.fluid.src || cover})`,
       paddingBottom: '6rem',
       marginBottom: '-6rem',
     }}
@@ -53,7 +54,7 @@ const Navbar = ({ title, intro, cover }) => (
         </div>
       </div>
     </nav>
-  </div>
+  </BackgroundImage>
 )
 
 Navbar.propTypes = {

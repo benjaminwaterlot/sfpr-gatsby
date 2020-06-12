@@ -9,6 +9,7 @@
     "eslint": "6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "gatsby": "^2.20.35",
+    "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.5",
     "gatsby-optional-chaining": "^1.0.1",
     "gatsby-plugin-netlify": "^2.2.4",
