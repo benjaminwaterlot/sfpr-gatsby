@@ -41,7 +41,7 @@ const Card = ({
           <div className="overflow-auto">
             {picture?.src && picture.display === 'embed' && (
               <Image
-                className="mr-2 my-1"
+                className="mr-3 my-1"
                 fluid={picture.src.childImageSharp.fluid}
                 style={{ cssFloat: 'left', width: '40%' }}
               />
