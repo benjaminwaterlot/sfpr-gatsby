@@ -3,9 +3,9 @@ templateKey: article
 title: Colloque international de Genève - Religion et beauté
 type: event
 picture:
-  display: cover
+  display: embed
   src: /img/hans-vivek-uimkbvdqsaa-unsplash.jpg
-date: 2020-05-25
+date: 2020-06-18
 settings:
   hidden: false
 ---
