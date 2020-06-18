@@ -5,7 +5,7 @@ type: event
 picture:
   display: embed
   src: /img/que_faire_apres_la_vague_15_06_2020_web_page_1.jpg
-date: 2020-06-05
+date: 2020-06-05T00:00:00.000Z
 settings:
   hidden: false
 ---
@@ -18,6 +18,8 @@ Genève/New-York - Christianisme/Islam
 Une discussion en ligne (sur inscription) en français, proposée par la Faculté de théologie de l'Université de Genève, ouverte aux étudiant-es et au public. Avec la participation de **Ghislain Waterlot**, professeur de philosophie de la religion et d’éthique, doyen de la Faculté de théologie de l’Université de Genève et **Souleymane Bachir-Diagne**, professeur de philosophie, anthropologie et littérature, Columbia University in the City of New-York.
 
 À la différence d'autres épidémies, le COVID-19 interroge radicalement notre monde et nos sociétés. Prenons le temps d'en débattre en regards croisés.
+
+L'événement a réuni sur le Web 70 personnes de divers pays.
 
 **MODÉRATION :**  **Sarah Scholl**, maître-assistante en histoire du christianisme Faculté de théologie, Université de Genève
 
