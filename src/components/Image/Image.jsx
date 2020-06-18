@@ -26,7 +26,7 @@ const EmbedImage = ({ src, className, width, style }) =>
     <GatsbyImage
       fluid={src.childImageSharp.fluid}
       style={{ cssFloat: 'left', width, ...style }}
-      className={className}
+      className={`float-left ${className}`}
     />
   ) : (
     <img

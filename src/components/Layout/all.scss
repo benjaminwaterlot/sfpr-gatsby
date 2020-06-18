@@ -87,6 +87,10 @@ $spacing-values: (
   overflow: auto;
 }
 
+.float-left {
+  float: left;
+}
+
 @include mobile {
   .section {
     padding-left: 0;
