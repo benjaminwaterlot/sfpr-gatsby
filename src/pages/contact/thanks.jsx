@@ -5,8 +5,8 @@ const Thanks = () => (
   <Layout>
     <div className="container">
       <div className="box py-6 px-6 content">
-        <h1>Thank you!</h1>
-        <p>This is a custom thank you page for form submissions</p>
+        <h1>Merci !</h1>
+        <p>Nous reviendrons vers vous rapidement par e-mail.</p>
       </div>
     </div>
   </Layout>

@@ -5,6 +5,20 @@ import Image from '../components/Image'
 import { graphql } from 'gatsby'
 import { formatDate } from '../lib/format'
 
+const getMemberPriority = ({ frontmatter }) => {
+  const politicalOrder = [
+    'Schmitt',
+    'Courtel',
+    'Diagne',
+    'Cohen-Levinas',
+    'Waterlot',
+  ]
+
+  return politicalOrder.findIndex(
+    (lastName) => lastName === frontmatter.lastName,
+  )
+}
+
 const MemberCard = ({ member }) => {
   const Wrapper = member.website ? 'a' : 'div'
 
@@ -70,9 +84,13 @@ const AboutUsPage = ({
 
         <h2 className="title is-4 mt-7">{frontmatter.administrators}</h2>
         <MemberGrid
-          members={members.filter(({ frontmatter: { roles } }) =>
-            roles?.includes('ADMINISTRATOR'),
-          )}
+          members={members
+            .filter(({ frontmatter: { roles } }) =>
+              roles?.includes('ADMINISTRATOR'),
+            )
+            .sort((a, b) => {
+              return getMemberPriority(a) > getMemberPriority(b) ? -1 : 1
+            })}
         />
 
         <h2 className="title is-4 mt-7">{frontmatter.founders}</h2>
@@ -109,6 +127,7 @@ export const pageQuery = graphql`
 
     memberNodes: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "member" } } }
+      sort: { fields: frontmatter___lastName, order: ASC }
     ) {
       members: nodes {
         frontmatter {

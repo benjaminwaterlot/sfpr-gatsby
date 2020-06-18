@@ -37,8 +37,12 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <div className="container">
-          <div className="box py-6 px-6 content">
-            <h1>Contact</h1>
+          <div className="box py-6 px-6">
+            <h1 className="title is-2">Contact</h1>
+            <p className="mb-7">
+              Si vous souhaitez nous contacter, remplissez le formulaire
+              suivant.
+            </p>
             <form
               name="contact"
               method="post"
@@ -56,10 +60,10 @@ export default class Index extends React.Component {
                 </label>
               </div>
               <div className="field">
-                <label className="label" htmlFor={'name'}>
-                  Your name
+                <label className="mb-5" htmlFor={'name'}>
+                  Votre nom :
                 </label>
-                <div className="control">
+                <div className="control mt-3 mb-6">
                   <input
                     className="input"
                     type={'text'}
@@ -71,10 +75,10 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={'email'}>
-                  Email
+                <label className="mb-5" htmlFor={'email'}>
+                  Votre addresse e-mail :
                 </label>
-                <div className="control">
+                <div className="control mt-3 mb-6">
                   <input
                     className="input"
                     type={'email'}
@@ -86,10 +90,10 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={'message'}>
-                  Message
+                <label className="mb-5" htmlFor={'message'}>
+                  Votre message pour les administrateurs de la SFPR :
                 </label>
-                <div className="control">
+                <div className="control mt-3 mb-6">
                   <textarea
                     className="textarea"
                     name={'message'}
@@ -101,7 +105,7 @@ export default class Index extends React.Component {
               </div>
               <div className="field">
                 <button className="button is-link" type="submit">
-                  Send
+                  Envoyer
                 </button>
               </div>
             </form>
