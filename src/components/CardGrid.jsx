@@ -43,7 +43,7 @@ const Card = ({
               <Image
                 className="mr-3 my-1"
                 fluid={picture.src.childImageSharp.fluid}
-                style={{ cssFloat: 'left', width: '40%' }}
+                style={{ float: 'left', width: '40%' }}
               />
             )}
             <p>{excerpt}</p>
