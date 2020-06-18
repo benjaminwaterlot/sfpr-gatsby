@@ -44,12 +44,12 @@ const Navbar = ({ title, intro, cover }) => (
             ))}
           </div>
           <div className="level-right">
-            <Link
+            {/* <Link
               className="button is-black is-small has-text-weight-bold mr-2"
               to="/search"
             >
               Recherche
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
