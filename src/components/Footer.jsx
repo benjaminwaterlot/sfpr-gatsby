@@ -1,6 +1,7 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import { useStaticQuery, graphql } from 'gatsby'
+import Logo from '../img/app-logo.png'
 import { formatDate } from '../lib/format'
 
 const Footer = ({ cover }) => {
@@ -20,6 +21,13 @@ const Footer = ({ cover }) => {
         minHeight: 300,
       }}
     >
+      <img
+        src={Logo}
+        alt="Logo de la SFPR"
+        style={{ width: '88px' }}
+        className="mb-6"
+      />
+
       <p className="has-text-weight-bold">Dernière mise à jour :</p>
       {formatDate(data.site.buildTime, { format: 'PPPPpp' })}
     </BackgroundImage>

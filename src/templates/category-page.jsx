@@ -65,7 +65,7 @@ const CategoryPage = ({
       title={body.frontmatter.title}
       body={<div dangerouslySetInnerHTML={{ __html: body.html }} />}
       helmet={
-        <Helmet titleTemplate="%s | Blog">
+        <Helmet titleTemplate="%s | SFPR">
           <title>{body.frontmatter.title}</title>
           <meta name="description" content={body.excerpt} />
         </Helmet>

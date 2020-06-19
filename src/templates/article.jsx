@@ -42,7 +42,7 @@ const Article = ({ data: { markdownRemark: page } }) => (
     <ArticleTemplate
       body={<div dangerouslySetInnerHTML={{ __html: page.html }} />}
       helmet={
-        <Helmet titleTemplate="%s | Blog">
+        <Helmet titleTemplate="%s | SFPR">
           <title>{`${page.frontmatter.title}`}</title>
           <meta name="description" content={`${page.excerpt}`} />
         </Helmet>
