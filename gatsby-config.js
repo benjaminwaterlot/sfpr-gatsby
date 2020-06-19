@@ -23,7 +23,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
+              maxWidth: 1248,
             },
           },
           {
@@ -78,7 +78,7 @@ module.exports = {
       options: {
         // develop: true, // Activates purging in npm run develop
         purgeOnly: ['/all.scss'], // applies purging only on the bulma css file
-        develop: true,
+        // develop: true,
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array

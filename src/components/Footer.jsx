@@ -3,6 +3,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import Logo from '../img/app-logo.png'
 import { formatDate } from '../lib/format'
+import { Link } from 'gatsby'
 
 const Footer = ({ cover }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +30,16 @@ const Footer = ({ cover }) => {
       />
 
       <p className="has-text-weight-bold">Dernière mise à jour :</p>
-      {formatDate(data.site.buildTime, { format: 'PPPPpp' })}
+      <p className="mb-5">
+        {formatDate(data.site.buildTime, { format: 'PPPPpp' })}
+      </p>
+
+      <Link
+        className="button is-black is-small has-text-weight-bold mr-2"
+        to="/admin"
+      >
+        Administration
+      </Link>
     </BackgroundImage>
   )
 }

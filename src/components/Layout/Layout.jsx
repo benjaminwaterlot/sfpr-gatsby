@@ -8,7 +8,7 @@ import './all.scss'
 import useLayoutQuery from './use-layout-query'
 import Footer from '../Footer'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, isHome }) => {
   const {
     home: { frontmatter: infos },
     site: { siteMetadata },
@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         /> */}
       </Helmet>
-      <Navbar {...infos} />
+      <Navbar {...infos} isHome={isHome} />
       <section className="section mb-10">{children}</section>
       <Footer cover={infos.cover} />
     </div>

@@ -10,9 +10,9 @@ const IndexPage = ({
     articles: { nodes: articles },
     featured,
   },
-  pageContext: { currentPage, numberOfPages, featured: featuredId },
+  pageContext: { currentPage, numberOfPages },
 }) => (
-  <Layout>
+  <Layout isHome={true}>
     <div className="container">
       <CardGrid
         articles={
