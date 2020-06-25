@@ -3,9 +3,10 @@ import Navbar from '../../components/Navbar'
 
 const NavbarPreview = ({ entry }) => (
   <Navbar
-    cover={entry.getIn(['data', 'cover'])}
+    appCover={'https://sfpr.netlify.app/img/app-cover.jpg'}
     title={entry.getIn(['data', 'title'])}
     intro={entry.getIn(['data', 'intro'])}
+    isHome={true}
   />
 )
 

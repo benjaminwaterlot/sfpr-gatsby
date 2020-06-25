@@ -38,6 +38,7 @@ collections:
     label: 'Pages'
     label_singular: 'Page'
     description: "Les pages de SFPR. Il est seulement possible de modifier leur contenu, pas d'en créer de nouvelles."
+    preview_path: '{{slug}}'
     # editor:
     #   preview: false
     files:
@@ -237,6 +238,7 @@ collections:
     create: true
     slug: '{{fields.firstName}}-{{fields.lastName}}'
     summary: '{{fields.firstName}} {{fields.lastName}}'
+    preview_path: 'about-us'
     editor:
       preview: false
     fields:
