@@ -40,7 +40,7 @@ export const articleExcerpt = graphql`
         display
         src {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 60) {
+            fluid(maxWidth: 500, quality: 40) {
               ...GatsbyImageSharpFluid
             }
           }

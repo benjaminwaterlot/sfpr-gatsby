@@ -52,9 +52,6 @@ collections:
           - name: 'intro'
             label: 'Introduction'
             widget: 'text'
-          - name: 'cover'
-            label: 'Image de couverture'
-            widget: 'image'
           - name: 'featured_article'
             label: 'Article mis en avant'
             required: false
