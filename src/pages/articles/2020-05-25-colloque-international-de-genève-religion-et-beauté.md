@@ -11,6 +11,6 @@ settings:
 ---
 Le prochain colloque international de la **Société Francophone de Philosophie de la Religion** aura lieu au mois de septembre 2021 à l'Université de Genève.
 
-L'appel à communication sera lancé à la fin du mois de juin 2020.
+L'appel à communication sera lancé au début du mois de juillet 2020.
 
 Ce sera le cinquième colloque de la **SFPR**.
