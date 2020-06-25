@@ -234,6 +234,7 @@ collections:
     label_singular: 'Sociétaire'
     description: 'La liste des sociétaires de la SFPR'
     identifier_field: 'lastName'
+    sortableFields: ['firstName', 'lastName']
     # format: 'json'
     folder: 'src/content/members'
     create: true

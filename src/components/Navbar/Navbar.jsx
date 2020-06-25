@@ -13,10 +13,11 @@ const BGImage = (props) => {
 
   const style = { paddingBottom: '8rem', marginBottom: '-8rem' }
 
-  return props.cover?.childImageSharp ? (
+  return props.appCover?.childImageSharp ? (
     <BackgroundImage
       className={classes}
-      fluid={props.cover.childImageSharp.fluid}
+      fluid={props.appCover.childImageSharp.fluid}
+      backgroundColor="#0F1012"
       style={style}
     >
       {props.children}
@@ -25,7 +26,7 @@ const BGImage = (props) => {
     <div
       className={classes}
       style={{
-        backgroundImage: `url(${props.cover})`,
+        backgroundImage: `url(${props.appCover})`,
         ...style,
       }}
     >
@@ -53,9 +54,9 @@ const HomeIntro = ({ title, intro }) => (
   </>
 )
 
-const Navbar = ({ title, intro, cover, isHome = false }) => {
+const Navbar = ({ title, intro, appCover, isHome = false }) => {
   return (
-    <BGImage {...{ title, intro, cover }} isHome={isHome}>
+    <BGImage {...{ title, intro, appCover }} isHome={isHome}>
       <div className={isHome ? '' : `level`}>
         <div className={isHome ? '' : `level-left`}>
           {isHome ? (
@@ -100,7 +101,7 @@ const Navbar = ({ title, intro, cover, isHome = false }) => {
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   intro: PropTypes.string.isRequired,
-  cover: PropTypes.object.isRequired,
+  appCover: PropTypes.object.isRequired,
 }
 
 export default Navbar

@@ -12,6 +12,7 @@ const TemplateWrapper = ({ children, isHome }) => {
   const {
     home: { frontmatter: infos },
     site: { siteMetadata },
+    appCover,
   } = useLayoutQuery()
 
   return (
@@ -54,9 +55,9 @@ const TemplateWrapper = ({ children, isHome }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         /> */}
       </Helmet>
-      <Navbar {...infos} isHome={isHome} />
+      <Navbar {...infos} appCover={appCover} isHome={isHome} />
       <section className="section mb-10">{children}</section>
-      <Footer cover={infos.cover} />
+      <Footer cover={appCover} />
     </div>
   )
 }

@@ -14,12 +14,13 @@ export default () =>
         frontmatter {
           title
           intro
-          cover {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 80) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+        }
+      }
+
+      appCover: file(relativePath: { eq: "app-cover.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 80) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
