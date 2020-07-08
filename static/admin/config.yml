@@ -9,7 +9,7 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
 local_backend: true
-locale: 'fr'
+locale: 'customFr'
 
 site_url: 'https://sfpr.netlify.app'
 media_folder: static/img

@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/philo-et-theologie.jpg
-date: 2011-09-25
+date: 2011-09-25T00:00:00.000Z
 settings:
   hidden: false
 ---
