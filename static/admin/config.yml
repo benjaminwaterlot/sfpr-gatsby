@@ -317,24 +317,3 @@ collections:
         widget: 'string'
         required: false
         hint: 'Le lien vers la page internet de cette personne.'
-
-  - name: 'translation'
-    label: 'Textes'
-    label_singular: 'Texte'
-    description: 'Les textes utilisés partout sur le site.'
-    folder: 'src/content/translations'
-    format: 'json'
-    create: true
-    editor:
-      preview: false
-    slug: '{{fields.key}}'
-    summary: '[{{fields.key}}] {{fields.text}}'
-    fields:
-      - name: 'key'
-        label: 'Clé'
-        widget: 'hidden'
-        default: 'key'
-      - name: 'text'
-        label: 'Texte'
-        hint: 'Le texte qui doit apparaître sur le site'
-        widget: 'string'
