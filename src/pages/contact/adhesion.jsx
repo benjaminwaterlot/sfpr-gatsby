@@ -48,13 +48,28 @@ export default class Index extends React.Component {
               />
             </Helmet>
 
-            <h1 className="title is-2">Contact</h1>
-            <p className="mb-7">
-              Si vous souhaitez nous contacter, remplissez le formulaire
-              suivant.
+            <h1 className="title is-2">Devenir sociétaire</h1>
+            <h2 className="title is-5">Comment devenir sociétaire ?</h2>
+
+            <p className="mb-7 content">
+              <strong> Les conditions :</strong>
+              <ul>
+                <li>Être titulaire d'un doctorat en philosophie.</li>
+                <li>
+                  Être engagé dans un programme de recherche (Post doctorat
+                  etc.) ou avoir un rattachement dans l'enseignement supérieur
+                  (Maitre de Conférence, Professeur ou équivalent).
+                </li>
+                <li>La cotisation est fixée à 25 €.</li>
+              </ul>
+              <div className="my-5">
+                <strong> La procédure :</strong> Remplir une demande d'adhésion
+                grâce au <strong>formulaire ci-dessous </strong>et le conseil
+                scientifique évaluera votre demande.
+              </div>
             </p>
             <form
-              name="contact"
+              name="adhesion"
               method="post"
               action="/contact/thanks/"
               data-netlify="true"
@@ -69,9 +84,10 @@ export default class Index extends React.Component {
                   <input name="bot-field" onChange={this.handleChange} />
                 </label>
               </div>
+
               <div className="field">
-                <label className="mb-5" htmlFor={'name'}>
-                  Votre nom :
+                <label className="mb-5 has-text-weight-bold" htmlFor={'name'}>
+                  Votre nom et prénom :
                 </label>
                 <div className="control mt-3 mb-6">
                   <input
@@ -84,8 +100,41 @@ export default class Index extends React.Component {
                   />
                 </div>
               </div>
+
               <div className="field">
-                <label className="mb-5" htmlFor={'email'}>
+                <label className="mb-5 has-text-weight-bold" htmlFor={'name'}>
+                  Lieu du Doctorat et année :
+                </label>
+                <div className="control mt-3 mb-6">
+                  <input
+                    className="input"
+                    type={'text'}
+                    name={'doctorat'}
+                    id={'doctorat'}
+                    onChange={this.handleChange}
+                    required={true}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="mb-5 has-text-weight-bold" htmlFor={'name'}>
+                  Affiliation actuelle :
+                </label>
+                <div className="control mt-3 mb-6">
+                  <input
+                    className="input"
+                    type={'text'}
+                    name={'affiliation'}
+                    id={'affiliation'}
+                    onChange={this.handleChange}
+                    required={true}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label className="mb-5 has-text-weight-bold" htmlFor={'email'}>
                   Votre addresse e-mail :
                 </label>
                 <div className="control mt-3 mb-6">
@@ -99,9 +148,14 @@ export default class Index extends React.Component {
                   />
                 </div>
               </div>
+
               <div className="field">
-                <label className="mb-5" htmlFor={'message'}>
-                  Votre message pour les administrateurs de la SFPR :
+                <label
+                  className="mb-5 has-text-weight-bold"
+                  htmlFor={'message'}
+                >
+                  En quelques mots, sur quelles questions liées à la société
+                  travaillez-vous ?
                 </label>
                 <div className="control mt-3 mb-6">
                   <textarea
@@ -113,6 +167,7 @@ export default class Index extends React.Component {
                   />
                 </div>
               </div>
+
               <div className="field">
                 <button className="button is-link" type="submit">
                   Envoyer

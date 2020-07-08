@@ -19,7 +19,8 @@ module.exports = {
     // 'linebreak-style': ['error', 'unix'],
     // quotes: ['error', 'single'],
     // semi: ['error', 'never'],
-    'react/prop-types': 'warn',
+    'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
   },
   settings: {
     react: {

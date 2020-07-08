@@ -19,7 +19,7 @@ const Footer = ({ cover }) => {
       className="container is-fluid py-8 has-text-white has-text-centered"
       fluid={cover?.childImageSharp?.fluid}
       style={{
-        minHeight: 300,
+        minHeight: 400,
       }}
     >
       <img

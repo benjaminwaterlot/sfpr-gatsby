@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import WhiteBox from '../components/WhiteBox'
 import Image from '../components/Image'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { formatDate } from '../lib/format'
 
@@ -69,13 +70,18 @@ const MemberGrid = ({ members }) => (
 
 const AboutUsPage = ({
   data: {
-    page: { frontmatter, html },
+    page: { frontmatter, html, excerpt },
     memberNodes: { members },
   },
 }) => (
   <Layout>
     <div className="container">
       <WhiteBox>
+        <Helmet titleTemplate="%s | SFPR">
+          <title>Qui sommes-nous ?</title>
+          <meta name="description" content={excerpt} />
+        </Helmet>
+
         <h1 className="title is-1">{frontmatter.title}</h1>
 
         <div className="markdown content mb-8">
@@ -117,6 +123,7 @@ export const pageQuery = graphql`
   query AboutPage {
     page: markdownRemark(frontmatter: { templateKey: { eq: "about-us" } }) {
       html
+      excerpt
       frontmatter {
         title
         administrators

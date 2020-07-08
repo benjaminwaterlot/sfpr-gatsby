@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children, isHome }) => {
         /> */}
         <meta name="theme-color" content="#fff" />
 
-        <meta property="og:type" content="business.business" />
+        {/* <meta property="og:type" content="business.business" /> */}
         <meta property="og:title" content={siteMetadata.title} />
         <meta property="og:url" content="/" />
         {/* <meta
