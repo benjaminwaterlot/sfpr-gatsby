@@ -27,4 +27,8 @@ export default [
     label: 'Contact',
     route: '/contact',
   },
+  {
+    label: 'Adhésion',
+    route: '/contact/adhesion',
+  },
 ]

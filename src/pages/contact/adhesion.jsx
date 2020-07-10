@@ -41,11 +41,8 @@ export default class Index extends React.Component {
         <div className="container">
           <WhiteBox>
             <Helmet>
-              <title>Contact | SFPR</title>
-              <meta
-                name="description"
-                content="Si vous souhaitez nous contacter, remplissez le formulaire suivant."
-              />
+              <title>Adhésion | SFPR</title>
+              <meta name="description" content="Devenir sociétaire" />
             </Helmet>
 
             <h1 className="title is-2">Devenir sociétaire</h1>
@@ -54,18 +51,22 @@ export default class Index extends React.Component {
             <p className="mb-7 content">
               <strong> Les conditions :</strong>
               <ul>
-                <li>Être titulaire d'un doctorat en philosophie.</li>
                 <li>
-                  Être engagé dans un programme de recherche (Post doctorat
-                  etc.) ou avoir un rattachement dans l'enseignement supérieur
-                  (Maitre de Conférence, Professeur ou équivalent).
+                  Être titulaire d&#39;un doctorat en philosophie ou d’un titre
+                  considéré par le bureau comme équivalent.
                 </li>
-                <li>La cotisation est fixée à 25 €.</li>
+                <li>
+                  Être engagé dans un programme de recherche ou avoir un
+                  rattachement dans l'enseignement supérieur.
+                </li>
+                <li>
+                  La cotisation est fixée à 25 € (cotisation ordinaire) ou 50 €
+                  (cotisation de soutien).
+                </li>
               </ul>
               <div className="my-5">
                 <strong> La procédure :</strong> Remplir une demande d'adhésion
-                grâce au <strong>formulaire ci-dessous </strong>et le conseil
-                scientifique évaluera votre demande.
+                grâce au <strong>formulaire ci-dessous </strong>.
               </div>
             </p>
             <form
@@ -154,8 +155,7 @@ export default class Index extends React.Component {
                   className="mb-5 has-text-weight-bold"
                   htmlFor={'message'}
                 >
-                  En quelques mots, sur quelles questions liées à la société
-                  travaillez-vous ?
+                  Vos thématiques de recherche :
                 </label>
                 <div className="control mt-3 mb-6">
                   <textarea
