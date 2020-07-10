@@ -1,6 +1,6 @@
 ---
 title: Articles de blog
-templateKey: category-page
+templateKey: blogs-page
 contains: blog
 ---
 

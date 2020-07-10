@@ -43,6 +43,10 @@ $spacing-values: (
   '10': 7.5rem,
 );
 
+$size-7: 0.875rem;
+$size-8: 0.75rem;
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8;
+
 @import '~bulma';
 
 // MARKDOWN

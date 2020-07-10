@@ -133,6 +133,7 @@ collections:
           - label: 'Corps de texte'
             name: 'body'
             <<: *markdown
+
       # SEARCH - The search page
       # - label: 'Rechercher'
       #   name: 'search'

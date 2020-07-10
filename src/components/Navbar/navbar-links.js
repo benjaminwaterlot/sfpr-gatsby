@@ -21,7 +21,7 @@ export default [
   },
   {
     label: 'Blogs',
-    route: '/blog/ghislain-waterlot',
+    route: '/blogs',
   },
   {
     label: 'Contact',

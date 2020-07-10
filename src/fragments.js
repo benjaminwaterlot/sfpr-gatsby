@@ -54,4 +54,32 @@ export const articleExcerpt = graphql`
   }
 `
 
-// export const
+export const member = graphql`
+  fragment Member on MarkdownRemark {
+    frontmatter {
+      firstName
+      lastName
+      portrait {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 40) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      roles
+      job
+      website
+    }
+  }
+`
+
+export const blogExcerpt = graphql`
+  fragment BlogExcerpt on MarkdownRemark {
+    frontmatter {
+      author
+      title
+      date
+    }
+    excerpt(pruneLength: 100)
+  }
+`

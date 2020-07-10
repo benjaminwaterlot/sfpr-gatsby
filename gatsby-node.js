@@ -149,7 +149,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   authors.forEach((author) => {
     createPage({
-      path: `blog/${author}`,
+      path: `blogs/${author}`,
       component: path.resolve('src/templates/blog.jsx'),
       context: {
         author,
