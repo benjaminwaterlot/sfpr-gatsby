@@ -20,6 +20,8 @@ CATEGORIES.forEach((category) => {
   CMS.registerPreviewTemplate(category, CategoryPagePreview)
 })
 
+CMS.registerPreviewTemplate('blogs', CategoryPagePreview)
+
 CMS.registerPreviewTemplate('home', NavbarPreview)
 CMS.registerPreviewTemplate('article', ArticlePreview)
 
