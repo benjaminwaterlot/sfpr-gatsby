@@ -6,12 +6,6 @@ import NavbarPreview from './preview-templates/NavbarPreview.jsx'
 import CategoryPagePreview from './preview-templates/CategoryPagePreview.jsx'
 import locale from './locale'
 
-const netlifyIdentity = require('netlify-identity-widget')
-
-netlifyIdentity.init({
-  locale: 'fr',
-})
-
 CMS.registerLocale('customFr', locale)
 
 const CATEGORIES = ['events', 'publications', 'news']

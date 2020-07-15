@@ -71,7 +71,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         htmlTitle: 'SFPR - Administration',
-        enableIdentityWidget: false,
+        enableIdentityWidget: true,
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
