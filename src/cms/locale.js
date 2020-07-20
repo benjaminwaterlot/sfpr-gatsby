@@ -130,7 +130,7 @@ const fr = {
       publishNow: 'Publier maintenant',
       deployPreviewPendingButtonLabel: "Vérifier l'aperçu",
       deployPreviewButtonLabel: "Voir l'aperçu",
-      deployButtonLabel: 'Voir en direct',
+      deployButtonLabel: 'Voir sur le site',
     },
     editorWidgets: {
       markdown: { richText: 'Texte normal', markdown: 'Texte encodé' },

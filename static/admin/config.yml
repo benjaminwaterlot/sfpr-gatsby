@@ -148,8 +148,8 @@ collections:
 
   # BLOGS - A blog
   - name: 'blog'
-    label: 'Blogs'
-    label_singular: 'Blog'
+    label: 'Articles de blog'
+    label_singular: 'Article de blog'
     description: 'Les blogs publiés sur le site.'
     folder: 'src/pages/blogs'
     create: true
