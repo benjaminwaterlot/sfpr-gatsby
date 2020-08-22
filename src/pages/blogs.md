@@ -3,7 +3,4 @@ title: Articles de blog
 templateKey: blogs-page
 contains: blog
 ---
-
-Retrouvez ici **tous les blogs de SFPR** de la Société Francophone de Philosophie de la Religion.\
-\
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione excepturi esse doloremque repudiandae velit, et aliquam laborum natus consequatur minima! Eveniet totam illo dolore optio saepe, dolores distinctio! Quasi, voluptatibus! Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Sur ce site nouveau, les membres de la **Société Francophone de Philosophie de la Religion** qui le souhaitent peuvent tenir un blog sur cette page où vous pourrez toujours les consulter dans leur ordre chronologique.
