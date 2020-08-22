@@ -13,4 +13,4 @@ Le prochain congrès de la **Société Francophone de Philosophie de la Religion
 
 L'appel à communication sera lancé au début du mois de septembre 2020.
 
-Ce sera le cinquième congrès de la **SFPR**. Il faut suite au congrès sur *Religion et ritualité* qui s'est tenu à l'Université de Columbia (New York) sous la direction de Souleymane Bachir Diagne.
+Ce sera le cinquième congrès de la **SFPR**. Il fait suite au congrès sur *Religion et ritualité* qui s'est tenu à l'Université de Columbia (New York) sous la direction de Souleymane Bachir Diagne.
