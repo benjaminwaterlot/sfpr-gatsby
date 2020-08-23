@@ -86,7 +86,7 @@ export default class Index extends React.Component {
               </div>
               <div className="field">
                 <label className="mb-5" htmlFor={'email'}>
-                  Votre addresse e-mail :
+                  Votre adresse e-mail :
                 </label>
                 <div className="control mt-3 mb-6">
                   <input

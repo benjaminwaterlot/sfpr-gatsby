@@ -60,13 +60,13 @@ export default class Index extends React.Component {
                   rattachement dans l'enseignement supérieur.
                 </li>
                 <li>
-                  La cotisation est fixée à 25 € (cotisation ordinaire) ou 50 €
-                  (cotisation de soutien).
+                  La cotisation annuelle est fixée à 25 € (cotisation ordinaire)
+                  ou 50 € (cotisation de soutien).
                 </li>
               </ul>
               <div className="my-5">
                 <strong> La procédure :</strong> Remplir une demande d'adhésion
-                grâce au <strong>formulaire ci-dessous </strong>.
+                grâce au <strong>formulaire ci-dessous</strong>.
               </div>
             </p>
             <form
@@ -136,7 +136,7 @@ export default class Index extends React.Component {
 
               <div className="field">
                 <label className="mb-5 has-text-weight-bold" htmlFor={'email'}>
-                  Votre addresse e-mail :
+                  Votre adresse e-mail :
                 </label>
                 <div className="control mt-3 mb-6">
                   <input
