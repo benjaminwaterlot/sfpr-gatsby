@@ -1,12 +1,10 @@
 ---
 templateKey: blog
 author: ghislain-waterlot
-title: " Religion et beauté. A quoi aspirons-nous ?"
+title: " Religion et beauté. Ou l'aspiration au décentrement."
 date: 2020-08-23
 ---
-
-
-Les discours contemporains autour de la religion sont souvent crispés, soit parce que la religion est perçue comme source de violence, soit parce qu’on se fixe sur elle comme source de vérité doctrinale tout en constatant qu’elle n’a même plus la crédibilité suffisante pour être encore vraiment discutée, quelle qu’elle soit, dans la plupart des corps sociaux. Nous vivons l’époque où même les plus grandes religions courent le risque d’être ravalées au rang de sectes (même vastes).
+Les discours contemporains autour de la religion sont souvent crispés, soit parce que la religion est perçue comme source de violence, soit parce qu’on se fixe sur elle comme source de vérité doctrinale tout en constatant qu’elle n’a plus la crédibilité suffisante pour être encore vraiment discutée, quelle qu’elle soit, dans la majorité des corps sociaux. Nous vivons l’époque où même les plus grandes religions courent le risque d’être ravalées au rang de vastes sectes.
 
 Dans notre contexte SFPR, il ne s’agit pas de savoir si c’est bon ou mauvais, mais plutôt de se demander si le plus vivant dans les religions n’est pas ce qui rappelle à l’être humain le nécessaire décentrement de soi. Beaucoup y aspirent en un temps où l’on commence à sentir que nous risquons de mourir, en masse, de l’obsession du centrement de l’humanité sur elle-même et ses pouvoirs, l’illusion d’un *rise up* sans fin.
 
