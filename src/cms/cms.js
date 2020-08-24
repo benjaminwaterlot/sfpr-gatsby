@@ -56,4 +56,7 @@ CMS.registerEditorComponent({
   toBlock: function (obj) {
     return `![${obj.display}](${obj.src} "${obj.display}")`
   },
+  toPreview: function (obj) {
+    return `<div class="image ${obj.display}" style="background-image: url(${obj.src}); height: 300px;"> </div>`
+  },
 })
