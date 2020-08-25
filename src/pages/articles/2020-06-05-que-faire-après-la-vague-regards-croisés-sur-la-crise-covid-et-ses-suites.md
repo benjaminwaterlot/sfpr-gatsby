@@ -8,7 +8,7 @@ picture:
 date: 2020-08-25
 settings:
   hidden: false
-  description: >-
+  description: >
     Lundi 15 juin 2020 | 18h
 
 
@@ -19,9 +19,6 @@ settings:
 
 
     La discussion en ligne a été proposée par la Faculté de théologie de l'Université de Genève. Avec la participation de Ghislain Waterlot, professeur de philosophie de la religion et d’éthique, doyen de la Faculté de théologie de l’Université de Genève et Souleymane Bachir-Diagne, professeur de philosophie, anthropologie et littérature, Columbia University in the City of New-York.
-
-
-    À la différence d'autres épidémies, le COVID-19 interroge radicalement notre monde et nos sociétés. Prenons le temps d'en débattre en regards croisés.
 ---
 Genève/New-York - Christianisme/Islam
 
