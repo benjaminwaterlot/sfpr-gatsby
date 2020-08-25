@@ -5,7 +5,7 @@ type: event
 picture:
   display: cover
   src: /img/hans-vivek-uimkbvdqsaa-unsplash.jpg
-date: 2020-06-30
+date: 2020-08-25
 settings:
   hidden: false
 ---
