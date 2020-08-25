@@ -10,11 +10,11 @@ settings:
 ---
 *Edited by Joël Madore and David Tracey*
 
-**Analecta Hermeneutica, vol 9 (2017)** 
+*[**Analecta Hermeneutica, vol 9 (2017)** ](https://journals.library.mun.ca/ojs/index.php/analecta/issue/view/129)*
 
-## Table of Contents 
+## Table of Contents
 
-### Articles 
+### Articles
 
 Augustine’s ‘Si comprehendis, non est Deus’ – To what extent is God incomprehensible?  Jean Grondin 
 
@@ -34,6 +34,6 @@ On Kant On the Idea(s) of God, Garth W. Green
 
 Ars moriendi: Of course, I must polish my shoes, Mario O. D’Souza 
 
-### Reviews and Notices 
+### Reviews and Notices
 
 Review of Riccardo Saccenti’s Debating Medieval Natural Law: A Survey (Notre Dame, IN: University of Notre Dame Press, 2016), Peter Karl Koritansky
