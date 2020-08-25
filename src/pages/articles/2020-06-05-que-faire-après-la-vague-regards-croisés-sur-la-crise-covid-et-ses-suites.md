@@ -5,7 +5,7 @@ type: event
 picture:
   display: embed
   src: /img/que_faire_apres_la_vague_15_06_2020_web_page_1.jpg
-date: 2020-06-05T00:00:00.000Z
+date: 2020-08-25
 settings:
   hidden: false
 ---
