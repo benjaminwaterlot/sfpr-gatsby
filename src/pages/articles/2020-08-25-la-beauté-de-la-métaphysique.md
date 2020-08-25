@@ -5,9 +5,16 @@ type: publication
 picture:
   display: embed
   src: /img/2019-05-grondin-la-beaute-de-la-meta-4-5cc08770ad314.jpg
-date: 2020-08-25
+date: 2020-08-24
 settings:
   hidden: false
+  description: "Et si la métaphysique était le plus grand bienfait de l’histoire
+    de l’humanité ? Elle repose sur une expérience toute simple et déconcertante
+    : celle de l’infinie beauté du monde qui s’impose à notre intelligence
+    malgré le mal, la souffrance et l’absurde que nous ne manquons pas de
+    rencontrer et qui ne suscitent notre indignation que parce que l’attente
+    métaphysique est première. L’idée de base de la métaphysique est que cette
+    beauté a une raison, et que l’homme y a part."
 ---
 
 
