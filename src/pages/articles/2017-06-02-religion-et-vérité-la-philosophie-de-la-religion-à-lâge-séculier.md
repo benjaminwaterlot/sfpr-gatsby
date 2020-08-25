@@ -9,7 +9,7 @@ date: 2017-06-02
 settings:
   hidden: false
 ---
-Édité par Jean Grondin, Garth Green
+Édité par Jean Grondin, Garth Green. Presses Universitaires de Strasbourg
 
 Date de parution : juin 2017
 
