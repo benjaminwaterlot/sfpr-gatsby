@@ -4,6 +4,7 @@ title: Colloque - The Idea of God
 type: event
 picture:
   display: embed
+  src: /img/cover_issue_129_en_us.jpg
 date: 2016-11-03
 settings:
   hidden: false
