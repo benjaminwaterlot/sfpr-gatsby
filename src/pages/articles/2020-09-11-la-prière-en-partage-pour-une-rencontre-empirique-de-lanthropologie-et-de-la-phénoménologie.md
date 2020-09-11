@@ -5,6 +5,7 @@ title: La prière en partage - Pour une rencontre empirique de l'anthropologie e
 type: event
 picture:
   display: embed
+  src: /img/symposium.png
 date: 2020-09-11
 settings:
   hidden: true
