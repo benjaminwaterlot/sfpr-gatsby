@@ -8,7 +8,7 @@ picture:
   src: /img/symposium.png
 date: 2020-09-11
 settings:
-  hidden: true
+  hidden: false
   description: >-
     Il s'agit d'un symposium de recherche fermé, en forme de work in progress.
     Il se tiendra le 27 novembre 2020 et est organisé par l'ENS Lyon et
