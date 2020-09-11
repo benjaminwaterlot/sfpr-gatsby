@@ -4,6 +4,7 @@ title: The Idea of God
 type: publication
 picture:
   display: embed
+  src: /img/cover_issue_129_en_us.jpg
 date: 2018-03-27
 settings:
   hidden: false
