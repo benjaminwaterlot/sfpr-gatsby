@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/2019-05-grondin-la-beaute-de-la-meta-4-5cc08770ad314.jpg
-date: 2020-08-24
+date: 2020-06-29
 settings:
   hidden: false
   description: "Et si la métaphysique était le plus grand bienfait de l’histoire
