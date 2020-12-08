@@ -13,7 +13,7 @@
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.5",
     "gatsby-optional-chaining": "^1.0.1",
-    "gatsby-plugin-google-analytics": "^2.7.0",
+    "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",

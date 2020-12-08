@@ -2,8 +2,6 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-console.log(`>>>>> ${process.env.GA_TRACKING_ID}`)
-
 module.exports = {
   siteMetadata: {
     title: 'SFPR',
@@ -11,6 +9,17 @@ module.exports = {
       "La Société Francophone de Philosophie de la Religion a pour but de promouvoir les recherches philosophiques universitaires sur les religions et l'expérience religieuse.",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: process.env.GA_TRACKING_ID,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -89,13 +98,6 @@ module.exports = {
         // develop: true,
       },
     }, // must be after other CSS plugins
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: process.env.GA_TRACKING_ID,
-      },
-    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
