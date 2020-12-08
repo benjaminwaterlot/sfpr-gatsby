@@ -16,8 +16,6 @@ module.exports = {
         trackingId: process.env.GA_TRACKING_ID,
         // Puts tracking script in the head instead of the body
         head: false,
-        // enable ip anonymization
-        anonymize: true,
       },
     },
     'gatsby-plugin-sharp',
