@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+console.log(`>>>>> ${process.env.GA_TRACKING_ID}`)
+
 module.exports = {
   siteMetadata: {
     title: 'SFPR',

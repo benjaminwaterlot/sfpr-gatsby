@@ -5,6 +5,7 @@ node_modules
 
 # GA
 .env.development
+.env.production
 
 # Build directory
 public/
