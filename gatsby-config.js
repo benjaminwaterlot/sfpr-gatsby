@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'SFPR',
@@ -83,6 +87,13 @@ module.exports = {
         // develop: true,
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
