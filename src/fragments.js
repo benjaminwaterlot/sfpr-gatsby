@@ -54,6 +54,34 @@ export const articleExcerpt = graphql`
   }
 `
 
+export const featuredArticleExcerpt = graphql`
+  fragment FeaturedArticleExcerpt on MarkdownRemark {
+    id
+    excerpt(pruneLength: 900)
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+      date
+      settings {
+        description
+      }
+      picture {
+        display
+        src {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 40) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      type
+    }
+  }
+`
+
 export const member = graphql`
   fragment Member on MarkdownRemark {
     frontmatter {
