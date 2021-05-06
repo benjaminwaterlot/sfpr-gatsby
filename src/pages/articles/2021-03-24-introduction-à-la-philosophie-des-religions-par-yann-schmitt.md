@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/intro-philo-religion-schmitt.png
-date: 2021-03-24
+date: 2021-03-25
 settings:
   hidden: false
 ---
