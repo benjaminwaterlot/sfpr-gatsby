@@ -6,7 +6,7 @@ type: publication
 picture:
   display: embed
   src: /img/religion-et-ritualité_couverture-1-.jpg
-date: 2021-07-22
+date: 2021-09-06
 settings:
   hidden: false
 ---
