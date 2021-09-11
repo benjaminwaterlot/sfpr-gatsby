@@ -1,7 +1,7 @@
 ---
 templateKey: article
 title: Les humains et leurs divinités. Politique et religions en dialogue, éd.
-  par J. Leclerc
+  par J. Leclercq
 type: publication
 picture:
   display: embed
