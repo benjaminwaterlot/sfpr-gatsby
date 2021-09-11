@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: D'ailleurs, la révélation. Par Jean-Luc Marion
+title: D'ailleurs, la révélation, par Jean-Luc Marion
 type: publication
 picture:
   display: embed
