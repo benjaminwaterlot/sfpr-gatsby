@@ -6,7 +6,7 @@ type: publication
 picture:
   display: embed
   src: /img/009530558.jpg
-date: 2021-09-06
+date: 2021-09-05
 settings:
   hidden: false
 ---
