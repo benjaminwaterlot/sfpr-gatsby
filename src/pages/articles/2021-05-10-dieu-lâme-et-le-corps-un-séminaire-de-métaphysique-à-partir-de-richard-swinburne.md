@@ -1,7 +1,7 @@
 ---
 templateKey: article
 title: Dieu, l'âme et le corps. Un séminaire de métaphysique à partir de Richard
-  Swinburne
+  Swinburne (Archives Henri Poincaré)
 type: event
 picture:
   display: embed
