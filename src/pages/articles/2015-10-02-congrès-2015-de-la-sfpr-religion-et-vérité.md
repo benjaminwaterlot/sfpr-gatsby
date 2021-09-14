@@ -1,9 +1,10 @@
 ---
 templateKey: article
-title: "Congrès 2015 de la SFPR : Religion et Vérité"
+title: Congrès 2015 de la SFPR - Université de Montréal et McGill - Religion et Vérité
 type: news
 picture:
   display: embed
+  src: /img/montreal.jpg
 date: 2015-10-02
 settings:
   hidden: false
