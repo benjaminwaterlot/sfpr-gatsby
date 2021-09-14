@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: 3ème Congrès international de la SFPR
+title: Congrès 2017 de la SFPR - Académie royale, Bruxelles - Religion et politique
 type: news
 picture:
   display: embed
