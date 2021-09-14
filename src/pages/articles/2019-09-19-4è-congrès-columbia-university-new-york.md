@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: 4è congrès - Columbia University, New York
+title: Congrès 2019 de la SFPR - Columbia University, New York - Religion et ritualité
 type: news
 picture:
   display: embed
