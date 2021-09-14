@@ -4,6 +4,7 @@ title: 4è congrès - Columbia University, New York
 type: news
 picture:
   display: embed
+  src: /img/sfpr-2019.jpeg
 date: 2019-09-19
 settings:
   hidden: false
