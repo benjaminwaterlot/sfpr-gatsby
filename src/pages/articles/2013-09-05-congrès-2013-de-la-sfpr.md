@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Congrès 2013 de la SFPR
+title: Congrès 2013 de la SFPR - Université de Strasbourg - Religion et liberté
 type: news
 picture:
   display: embed
