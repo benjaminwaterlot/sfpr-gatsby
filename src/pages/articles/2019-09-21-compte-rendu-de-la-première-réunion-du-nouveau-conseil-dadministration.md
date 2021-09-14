@@ -4,6 +4,7 @@ title: Compte-Rendu de la première réunion du nouveau Conseil d'Administration
 type: news
 picture:
   display: embed
+  src: /img/nyc-cover.jpeg
 date: 2019-09-21
 settings:
   hidden: false
