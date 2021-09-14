@@ -4,6 +4,7 @@ title: 3ème Congrès international de la SFPR
 type: news
 picture:
   display: embed
+  src: /img/maxresdefault.jpg
 date: 2017-09-14
 settings:
   hidden: false
