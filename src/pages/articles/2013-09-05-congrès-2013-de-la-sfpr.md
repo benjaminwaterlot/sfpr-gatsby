@@ -11,7 +11,7 @@ settings:
 ---
 Les 5-6-7 septembre 2013, la SFPR organise son premier congrès autour du thème *Religion et Liberté*.
 
-Le congrès aura lieu à l'Université de Strasbourg.
+Le congrès a lieu à l'Université de Strasbourg.
 
 **JEUDI 5 SEPT. APRES-MIDI**
 
