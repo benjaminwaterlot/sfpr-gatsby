@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: The Idea of God
+title: The Idea of God (publication open access)
 type: publication
 picture:
   display: embed
