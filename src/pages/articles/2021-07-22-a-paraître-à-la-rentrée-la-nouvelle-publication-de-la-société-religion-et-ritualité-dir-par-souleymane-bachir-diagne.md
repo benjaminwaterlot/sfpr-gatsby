@@ -1,7 +1,7 @@
 ---
 templateKey: article
-title: "A paraître à la rentrée, la nouvelle publication de la Société :
-  Religion et ritualité, dir. par Souleymane Bachir Diagne"
+title: "A paraître en novembre, la nouvelle publication de la Société : Religion
+  et ritualité, dir. par Souleymane Bachir Diagne"
 type: publication
 picture:
   display: embed
