@@ -2,7 +2,7 @@
 templateKey: member
 firstName: Philippe
 lastName: Capelle-Dumont
-portrait: /img/philippecapelle-dumont.jpg
+portrait: /img/img_0795.jpg
 roles:
   - FOUNDER
 job: Membre du conseil d'administration
