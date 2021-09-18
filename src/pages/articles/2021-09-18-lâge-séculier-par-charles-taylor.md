@@ -1,0 +1,12 @@
+---
+templateKey: article
+title: L'âge séculier, par Charles Taylor
+type: publication
+picture:
+  display: embed
+  src: /img/âge-séculier.jpg
+date: 2021-09-18
+settings:
+  hidden: false
+---
+Après *Les sources du moi*, consacrées à l’émergence du sujet moderne, Charles Taylor entreprend une histoire de la sécularisation. Ce très long récit, à la fois historique et analytique, lui permet de retracer la genèse d’un âge séculier qui coïncide avec ce qu’il nomme un « humanisme exclusif » ou autosuffisant. Ainsi, « un âge est séculier lorsque devient concevable l’éclipse de toutes les fins autres que celles relatives à l’épanouissement humain », à savoir la préservation de la vie, la valorisation du corps et le bien être individuel. En définissant la religion comme relation à un Dieu transcendant, l’auteur ouvre un débat, voire un conflit, entre deux âges (la chrétienté où Dieu était partout et l’incroyance immanente moderne), deux rapports au temps (les temps « supérieurs » ou modes d’éternité et le temps séculier, « vide et homogène »), deux visions du moi (poreux puis isolé) et de la plénitude (en Dieu, puis en l’homme). Entre ces deux extrêmes, d’autres options intermédiaires sont admises mais le choix de l’auteur est de comprendre la sécularité à partir des conditions de possibilité de l’expérience croyante, recherchées dans l’histoire de la philosophie et les expériences vécues. Taylor met donc l’accent sur les évolutions du christianisme « qui ont préparé la fuite hors de la foi vers un monde purement immanent ». L’auteur souligne le rôle de la Réforme, sa « fureur de l’ordre » qui accompagne la piété la plus intense et prépare l’avènement d’un moi isolé, policé, discipliné. Il refuse par ailleurs une lecture linéaire d’une sécularisation obtenue par soustraction et opte pour une « lecture en zigzag » qui insiste sur les mutations à l’intérieur de la dimension religieuse. L’analyse aboutit au constat que « les deux camps sont infectés par la maladie et doivent la combattre » et que la bataille ne se fait plus sur deux fronts mais dans une « mêlée générale » où s’affrontent humanistes séculiers et anti-humanistes, d’un côté, religieux et nouveaux convertis (tel Péguy) de l’autre.
