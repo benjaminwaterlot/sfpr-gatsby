@@ -1,6 +1,7 @@
 ---
 templateKey: article
-title: Judaïsme et christianisme dans la philosophie contemporaine
+title: Judaïsme et christianisme dans la philosophie contemporaine, éd. par P.
+  Capelle-Dumont et D. Cohen-Levinas
 type: publication
 picture:
   display: embed
