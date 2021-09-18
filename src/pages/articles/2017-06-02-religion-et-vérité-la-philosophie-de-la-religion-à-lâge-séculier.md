@@ -1,6 +1,7 @@
 ---
 templateKey: article
-title: Religion et Vérité. La philosophie de la religion à l'âge séculier
+title: Religion et Vérité. La philosophie de la religion à l'âge séculier, éds
+  J. Grondin et G. Green
 type: publication
 picture:
   display: embed
@@ -9,10 +10,6 @@ date: 2017-06-02
 settings:
   hidden: false
 ---
-Édité par Jean Grondin, Garth Green. Presses Universitaires de Strasbourg
-
-Date de parution : juin 2017
-
 Religion et vérité sont deux termes que l'on a perdu l’habitude de penser ensemble. C’est que l’on associe souvent la vérité à la science et à l’ordre des connaissances vérifiables, reléguant le religieux à celui de l’invérifiable ou des sentiments. Ce volume invite à un nouvel examen de cette distribution en rappelant que les religions ont de tout temps élevé une prétention de vérité et que c’est bien une vérité que leurs adhérents reconnaissent en elle. Quelle est cette vérité, en quoi est-elle défendable et comment se manifeste-t-elle dans les grandes religions, voire dans l’art et la philosophie elle-même ? Et comment la sphère politique doit-elle composer avec elle ?
 
 Partant d’un entretien avec Charles Taylor sur la constellation de l’âge séculier qui est le nôtre, ce volume réunit les meilleurs spécialistes des religions (judaïsme, christianisme, islam, confucianisme) et des philosophes de plusieurs horizons différents (phénoménologie, herméneutique, philosophie analytique, éthique, histoire de la philosophie, philosophie politique, théologie). Il propose un état des lieux rafraîchissant du champ de la philosophe de la religion qui connaît un essor inouï dans la pensée contemporaine.
