@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Philosopher en islam et en christianisme
+title: Philosopher en islam et en christianisme. Un dialogue
 type: publication
 picture:
   display: embed
