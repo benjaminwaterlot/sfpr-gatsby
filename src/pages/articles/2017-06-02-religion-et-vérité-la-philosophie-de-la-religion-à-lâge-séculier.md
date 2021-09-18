@@ -4,7 +4,7 @@ title: Religion et Vérité. La philosophie de la religion à l'âge séculier
 type: publication
 picture:
   display: embed
-  src: /img/28682100502020m.jpg
+  src: /img/rel-et-vér.jpg
 date: 2017-06-02
 settings:
   hidden: false
