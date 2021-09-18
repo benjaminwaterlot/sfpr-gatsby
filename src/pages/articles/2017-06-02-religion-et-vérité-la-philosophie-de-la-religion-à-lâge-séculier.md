@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Religion et Vérité. La philosophie de la religion à l'âge séculier, éds
+title: Religion et vérité. La philosophie de la religion à l'âge séculier, éds
   J. Grondin et G. Green
 type: publication
 picture:
