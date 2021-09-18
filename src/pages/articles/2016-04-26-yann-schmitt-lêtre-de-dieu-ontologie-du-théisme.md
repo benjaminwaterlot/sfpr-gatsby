@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: "Yann Schmitt, L'Être de Dieu: ontologie du théisme"
+title: "L'Être de Dieu: ontologie du théisme, par Yann Schmitt"
 type: publication
 picture:
   display: embed
