@@ -4,6 +4,7 @@ title: Romano Guardini, La mort de Socrate
 type: publication
 picture:
   display: embed
+  src: /img/mort-de-socrate.png
 date: 2015-10-07
 settings:
   hidden: false
