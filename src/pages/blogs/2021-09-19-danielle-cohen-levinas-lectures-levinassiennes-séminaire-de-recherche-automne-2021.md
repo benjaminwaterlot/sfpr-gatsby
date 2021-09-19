@@ -4,12 +4,11 @@ author: danielle-cohen-levinas
 title: Lectures levinassiennes - séminaire de recherche automne 2021
 date: 2021-09-19
 ---
-
-
 ***Séminaire de recherche***
 Les Archives Husserl de l’ENS-CNRS de Paris, en collaboration avec le « Collège des études juives et de philosophie contemporaine » (Centre Emmanuel Levinas) de l’Université Paris-Sorbonne et avec le Master PSL
 2020-2021
 
+![cover](/img/520px-emmanuel_levinas.jpg "cover")
 
 **Lectures levinassiennes, une autre voie phénoménologique**
 « Subjectivité - Éthique et philosophie de la religion »
@@ -17,7 +16,6 @@ Sous la responsabilité de Danielle Cohen-Levinas
 Jour : Mardi de 16h à 18h – Salle Pasteur (Bâtiment Pasteur, premier étage)
 Lieu : ENS, 45 rue d’Ulm, Paris 75005
 Salle : Salle Pasteur (Bâtiment Pasteur, premier étage)
-
 
 Programme :
 
@@ -45,6 +43,5 @@ Programme :
   totalité «
 * Mardi 7 décembre : Mickael Pellerin (Doctorant PSL/ENS) – « Subjectivité et
   littérature ».
-
 
   Conclusion : Danielle Cohen-Levinas
