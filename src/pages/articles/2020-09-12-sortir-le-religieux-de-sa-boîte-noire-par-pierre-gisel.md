@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/9782830917000.jpg
-date: 2020-09-12
+date: 2019-11-15
 settings:
   hidden: false
 ---
