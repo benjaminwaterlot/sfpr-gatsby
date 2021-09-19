@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: La Philosophie de la Religion, par Jean Grondin
+title: La Philosophie de la religion, par Jean Grondin
 type: publication
 picture:
   display: embed
