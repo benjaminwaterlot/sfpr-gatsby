@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Philosophie et théologie, sous la direction de Philippe Capelle-Dumont
+title: Philosophie et théologie, 4 volumes édités par P. Capelle-Dumont
 type: publication
 picture:
   display: embed
