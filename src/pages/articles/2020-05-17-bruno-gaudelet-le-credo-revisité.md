@@ -1,11 +1,11 @@
 ---
 templateKey: article
-title: Bruno Gaudelet, Le Credo revisité
+title: Le Credo revisité, par Bruno Gaudelet
 type: publication
 picture:
   display: embed
   src: /img/publication-le-credo-revisite.png
-date: 2020-05-17
+date: 2015-10-15
 settings:
   hidden: false
 ---
