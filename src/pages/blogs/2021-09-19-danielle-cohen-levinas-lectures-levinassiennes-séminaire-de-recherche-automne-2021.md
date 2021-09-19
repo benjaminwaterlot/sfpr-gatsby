@@ -8,7 +8,7 @@ date: 2021-09-19
 Les Archives Husserl de l’ENS-CNRS de Paris, en collaboration avec le « Collège des études juives et de philosophie contemporaine » (Centre Emmanuel Levinas) de l’Université Paris-Sorbonne et avec le Master PSL
 2020-2021
 
-![cover](/img/520px-emmanuel_levinas.jpg "cover")
+![embed](/img/520px-emmanuel_levinas.jpg "embed")
 
 **Lectures levinassiennes, une autre voie phénoménologique**
 « Subjectivité - Éthique et philosophie de la religion »
