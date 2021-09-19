@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Magdalene Thomassen, Traces de Dieu dans la philosophie d’Emmanuel Levinas
+title: Traces de Dieu dans la philosophie d’Emmanuel Levinas, par Magdalene Thomassen
 type: publication
 picture:
   display: embed
