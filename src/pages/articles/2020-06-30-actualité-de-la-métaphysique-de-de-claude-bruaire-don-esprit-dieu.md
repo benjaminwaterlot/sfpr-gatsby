@@ -4,7 +4,7 @@ title: Actualité de la métaphysique de Claude Bruaire. Don. Esprit. Dieu
 type: event
 picture:
   display: embed
-  src: /img/index.jpg
+  src: /img/bruaire.jpg
 date: 2020-06-30T00:00:00.000Z
 settings:
   hidden: false
