@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Romano Guardini, La mort de Socrate
+title: La mort de Socrate, par Romano Guardini
 type: publication
 picture:
   display: embed
