@@ -1,12 +1,11 @@
 ---
 templateKey: article
-title: À paraître le 23 septembre, Le Principe alliance (tome 1), par Philippe
-  Capelle-Dumont
+title: Le Principe alliance (tome 1), par Philippe Capelle-Dumont
 type: publication
 picture:
   display: embed
   src: /img/009530558.jpg
-date: 2021-09-05
+date: 2021-09-22
 settings:
   hidden: false
 ---
