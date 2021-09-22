@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: "Abd el-Kader : un spirituel dans la modernité, ed. E. Geoffroy"
+title: "Abd el-Kader : un spirituel dans la modernité, éd. E. Geoffroy"
 type: publication
 picture:
   display: embed
