@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/102426_meessen_philmed_lxxii_cover.jpg
-date: 2021-06-01
+date: 2021-07-31
 settings:
   hidden: false
 ---
