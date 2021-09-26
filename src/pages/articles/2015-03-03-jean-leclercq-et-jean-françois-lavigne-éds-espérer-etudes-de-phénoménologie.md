@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Jean LECLERCQ et Jean-François LAVIGNE (éds.) Espérer. Etudes de phénoménologie
+title: Espérer. Etudes de phénoménologie, éd. J. Leclercq et J.-F. Lavigne
 type: publication
 picture:
   display: embed
