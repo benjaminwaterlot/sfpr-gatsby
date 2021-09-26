@@ -4,6 +4,7 @@ title: Nom(s) divin(s) et libération
 type: event
 picture:
   display: embed
+  src: /img/noms-divins.jpg
 date: 2020-06-30T00:00:00.000Z
 settings:
   hidden: false
