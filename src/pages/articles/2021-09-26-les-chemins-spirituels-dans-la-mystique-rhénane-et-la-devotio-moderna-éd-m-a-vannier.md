@@ -6,7 +6,7 @@ type: publication
 picture:
   display: embed
   src: /img/vannier-eckhart.jpg
-date: 2021-09-26
+date: 2019-05-31
 settings:
   hidden: false
 ---
