@@ -1,10 +1,10 @@
 ---
 templateKey: article
-title: Jean Greisch, L'herméneutique comme sagesse de l'incertitude
+title: L'herméneutique comme sagesse de l'incertitude, par Jean Greisch
 type: publication
 picture:
   display: embed
-  src: /img/hermeneutique-sagesse.jpg
+  src: /img/jean-greisch.jpg
 date: 2015-10-07
 settings:
   hidden: false
