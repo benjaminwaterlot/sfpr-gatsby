@@ -4,6 +4,7 @@ title: Messianisme, souveraineté et sécularisation
 type: publication
 picture:
   display: embed
+  src: /img/icahiers-philosophiques-de-strasbourg.jpg
 date: 2015-11-01
 settings:
   hidden: false
