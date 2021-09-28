@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Le Principe alliance (tome 1), par Philippe Capelle-Dumont
+title: Le principe alliance (tome 1), par Philippe Capelle-Dumont
 type: publication
 picture:
   display: embed
