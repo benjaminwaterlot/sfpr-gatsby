@@ -1,0 +1,12 @@
+---
+templateKey: article
+title: Fénelon 1908. Jacques Rivière philosophe, par François Trémolières
+type: publication
+picture:
+  display: embed
+  src: /img/41foe-esfyl._sx316_bo1-204-203-200_.jpg
+date: 2015-11-15
+settings:
+  hidden: false
+---
+L'ouvrage que nous présentons est le mémoire qu'a rédigé jacques Rivière jeune étudiant, en 1907-1908, lorsqu'il préparait l'agrégation de philosophie. Le manuscrit en est perdu mais une version remaniée a paru dans une brillante revue catholique de l'époque, les *Annales de philosophie chrétienne*. C'est elle que nous reprenons ici, avec une annotation concernant les références à Fénelon. Ce dernier (1651-1715) est abordé ici non comme l'auteur des *Aventures du Télémaque* - un livre encore très lu jusqu'à la Première Guerre mondiale - mais pour ses écrits philosophiques et comme auteur spirituel (accusé de "quiétisme", c'est-à-dire une forme de la mystique condamnée par l'Église romaine). Cette édition est suivie d'un important essai de François Trémolières, spécialiste de Fénelon et de sa réception, ainsi que des études sur la mystique au début du XXe siècle. Un premier chapitre situe Rivière à la date où il écrit ce mémoire : à la fois le contexte de l'université de l'époque, son rapport au catholicisme, et les curiosités déjà littéraires et artistiques du jeune écrivain, très bien documentées par sa correspondance avec celui qui deviendra l'auteur du *Grand Maulnes*, Alain-Fournier. Un deuxième chapitre offre une lecture actuelle du mémoire, lequel a fait date dans les études féneloniennes. Un troisième chapitre s'intéresse au Fénelon dont hérite Rivière et pour ce faire retrace l'histoire de la réception de Fénelon philosophe, sur les deux siècles qui ont précédé. Un quatrième chapitre fait retour à Rivière et s'interroge sur le dédain dans lequel il semble avoir tenu ensuite ce travail et ce que cela peut nous apprendre de son évolution personnelle, brisée par une mort soudaine à moins de 39 ans. La correspondance avec Claudel, commencée dans ces mêmes années, est un indicateur décisif : elle permet notamment de comprendre l'insistance de Rivière sur ce qu'il appelle le "panthéisme" de Fénelon. Son mémoire s'inscrit ainsi dans un moment de l'histoire intellectuelle et de l'histoire de la littérature : plus que jamais, selon le titre de la biographie que lui a consacrée Jean Lacouture, "une adolescence dans le siècle".
