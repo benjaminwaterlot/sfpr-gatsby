@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Dieu en tant que Dieu, éd. P. Capelle-Dumont
+title: Dieu en tant que Dieu. La question philosophique, éd. P. Capelle-Dumont
 type: publication
 picture:
   display: embed
