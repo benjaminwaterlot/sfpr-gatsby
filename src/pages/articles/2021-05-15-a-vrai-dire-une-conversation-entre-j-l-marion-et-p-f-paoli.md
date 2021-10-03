@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: A vrai dire. Une conversation entre J.-L. Marion et P.-F. Paoli
+title: À vrai dire. Une conversation entre J.-L. Marion et P.-F. Paoli
 type: publication
 picture:
   display: embed
