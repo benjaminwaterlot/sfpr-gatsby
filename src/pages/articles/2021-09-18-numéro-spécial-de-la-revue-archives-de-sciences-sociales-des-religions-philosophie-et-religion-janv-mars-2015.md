@@ -1,7 +1,7 @@
 ---
 templateKey: article
-title: Numéro spécial de la revue Archives de Sciences Sociales des Religions,
-  "Philosophie et religion", janv.-mars 2015
+title: Philosophie et religion, n° spécial des Archives de Sciences Sociales des
+  Religions, janv.-mars 2015
 type: publication
 picture:
   display: embed
