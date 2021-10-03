@@ -4,7 +4,7 @@ title: Philosophie et théologie, 4 volumes édités par P. Capelle-Dumont
 type: publication
 picture:
   display: embed
-  src: /img/philo-et-theologie.jpg
+  src: /img/51igibmhsbl._sx306_bo1-204-203-200_.jpg
 date: 2011-09-25T00:00:00.000Z
 settings:
   hidden: false
