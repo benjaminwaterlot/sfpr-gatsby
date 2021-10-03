@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: Maximilianus Sandæus, un jésuite entre mystique et symbolique, éd. M.
+title: Maximilianus Sandæus, un jésuite entre mystique et symbolique, éds. M.
   Mazzocco, R. Dekoninck, A. Guiderdoni, C. Duyck
 type: publication
 picture:
