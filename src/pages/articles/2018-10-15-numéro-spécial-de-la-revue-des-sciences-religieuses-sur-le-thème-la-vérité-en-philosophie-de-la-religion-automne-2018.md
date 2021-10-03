@@ -1,7 +1,6 @@
 ---
 templateKey: article
-title: Numéro spécial de la Revue des Sciences Religieuses sur le thème "La
-  vérité en philosophie de la religion", automne 2018
+title: La vérité en philosophie de la religion, n° spécial de la RSR, automne 2018
 type: publication
 picture:
   display: embed
