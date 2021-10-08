@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: La religion dans la philosophie de Paul Ricœur
+title: La religion dans la philosophie de Paul Ricœur, par Daniel Frey
 type: publication
 picture:
   display: embed
