@@ -9,56 +9,52 @@ const Card = ({
   article: {
     fields,
     excerpt,
-    frontmatter: {
-      picture,
-      type,
-      date,
-      title,
-      settings: { description },
-    },
+    frontmatter: { picture, type, date, title, settings },
     isFeatured,
   },
-}) => (
-  <div
-    className={(() => {
-      const tablet = isFeatured ? `is-12-tablet` : `is-6-tablet`
-      const widescreen = isFeatured ? `is-8-widescreen` : `is-4-widescreen`
+}) => {
+  return (
+    <div
+      className={(() => {
+        const tablet = isFeatured ? `is-12-tablet` : `is-6-tablet`
+        const widescreen = isFeatured ? `is-8-widescreen` : `is-4-widescreen`
 
-      return `column ${tablet} ${widescreen}`
-    })()}
-  >
-    <Link to={fields.slug}>
-      <div
-        className="card is-full-height is-interactive"
-        style={{ borderRadius: 6, overflow: 'hidden' }}
-      >
-        {picture?.src && picture.display === 'cover' && (
-          <div className="card-image">
-            <Image
-              fluid={picture.src.childImageSharp.fluid}
-              style={{ height: isFeatured ? 300 : 220 }}
-            />
-          </div>
-        )}
-
-        <div className="card-content">
-          <ArticleOverline {...{ type, date }} />
-          <h3 className="title is-5 mt-1">{title}</h3>
-          <div className="overflow-auto">
-            {picture?.src && picture.display === 'embed' && (
+        return `column ${tablet} ${widescreen}`
+      })()}
+    >
+      <Link to={fields.slug}>
+        <div
+          className="card is-full-height is-interactive"
+          style={{ borderRadius: 6, overflow: 'hidden' }}
+        >
+          {picture?.src && picture.display === 'cover' && (
+            <div className="card-image">
               <Image
-                className="mr-3 my-1 float-left"
                 fluid={picture.src.childImageSharp.fluid}
-                style={{ width: '40%' }}
+                style={{ height: isFeatured ? 300 : 220 }}
               />
-            )}
-            <p>{description || excerpt}</p>
+            </div>
+          )}
+
+          <div className="card-content">
+            <ArticleOverline {...{ type, date }} />
+            <h3 className="title is-5 mt-1">{title}</h3>
+            <div className="overflow-auto">
+              {picture?.src && picture.display === 'embed' && (
+                <Image
+                  className="mr-3 my-1 float-left"
+                  fluid={picture.src.childImageSharp.fluid}
+                  style={{ width: '40%' }}
+                />
+              )}
+              <p>{settings?.description || excerpt}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
-  </div>
-)
+      </Link>
+    </div>
+  )
+}
 
 Card.propTypes = {
   article: markdownRemarkType,
@@ -67,9 +63,10 @@ Card.propTypes = {
 const CardGrid = ({ articles }) => {
   return (
     <div className="columns is-multiline">
-      {articles.map((article) => (
-        <Card key={article.id} article={article} />
-      ))}
+      {articles.map((article) => {
+        console.log(`[LOG] 👉   article`, article)
+        return <Card key={article.id} article={article} />
+      })}
     </div>
   )
 }

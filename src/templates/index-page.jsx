@@ -11,35 +11,39 @@ const IndexPage = ({
     featured,
   },
   pageContext: { currentPage, numberOfPages },
-}) => (
-  <Layout isHome={true}>
-    <div className="container">
-      <CardGrid
-        articles={
-          currentPage === 1 && featured
-            ? [
-                { ...featured, isFeatured: true },
-                ...articles.filter(
+}) => {
+  if (!featured?.fields?.slug.startsWith('/articles/')) featured = null
+
+  return (
+    <Layout isHome={true}>
+      <div className="container">
+        <CardGrid
+          articles={
+            currentPage === 1 && featured
+              ? [
+                  { ...featured, isFeatured: true },
+                  ...articles.filter(
+                    ({ frontmatter: { title } }) =>
+                      title !== featured?.frontmatter.title,
+                  ),
+                ]
+              : articles.filter(
                   ({ frontmatter: { title } }) =>
                     title !== featured?.frontmatter.title,
-                ),
-              ]
-            : articles.filter(
-                ({ frontmatter: { title } }) =>
-                  title !== featured?.frontmatter.title,
-              )
-        }
-      />
-      <div>
-        <Pagination
-          createUrl={(page) => (page === 1 ? '/' : `/${page}`)}
-          currentPage={currentPage}
-          numberOfPages={numberOfPages}
+                )
+          }
         />
+        <div>
+          <Pagination
+            createUrl={(page) => (page === 1 ? '/' : `/${page}`)}
+            currentPage={currentPage}
+            numberOfPages={numberOfPages}
+          />
+        </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default IndexPage
 
