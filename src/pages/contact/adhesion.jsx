@@ -56,6 +56,10 @@ export default class Index extends React.Component {
                   considéré par le bureau comme équivalent.
                 </li>
                 <li>
+                  Ou être doctorant-e en philosophie de la religion et agréé-e
+                  comme tel/le par le bureau.
+                </li>
+                <li>
                   Être engagé dans un programme de recherche ou avoir un
                   rattachement dans l'enseignement supérieur.
                 </li>
