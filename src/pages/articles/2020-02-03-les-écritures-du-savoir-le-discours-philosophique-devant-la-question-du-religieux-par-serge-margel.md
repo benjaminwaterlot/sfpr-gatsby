@@ -1,0 +1,13 @@
+---
+templateKey: article
+title: Les écritures du savoir. Le discours philosophique devant la question du
+  religieux, par Serge Margel
+type: publication
+picture:
+  display: embed
+  src: /img/41arz6yszel._sx282_bo1-204-203-200_.jpg
+date: 2020-02-03
+settings:
+  hidden: false
+---
+La philosophie a toujours entretenu un rapport problématique à la question du religieux, aux religions instituées et au pouvoir politique qu'elles exercent sur la société. Au XVIIIe s., la philosophie a fait de la religion un objet à proprement parler, mais dont la réalité demeure problématique jusqu'au jour d'aujourd'hui. Le recueil de textes que je présente ici croise le champ d'une philosophie de la religion, mais ne s'y réduit pas. L'objet de ces textes n‘est pas la religion, au sens strict, ni même le religieux, mais relève d'une question qui se pose et qui insiste dans le cadre des religions, le plus souvent monothéistes. Trois grandes catégories de questions sont ici développées. La première porte sur le concept de temps et ses différentes modalités, que sont le messianisme, le prophétisme, l'eschatologie et l'apocalypse. Cette catégorie ne forme pas un genre, mais représente une pensée du temps qui se décline, différemment dans le judaïsme, le christianisme et l'Islam. Le deuxième concerne la notion de corps et ses différents régimes d'apparition ou de présence, comme le corps martyr, le corps violenté, le corps miraculé ou le corps croyants. Dans tous ces cas, le corps devient un lieu d'inscription spécifique, par lequel le temps s'introduit dans l'histoire. Enfin, une troisième catégorie tourne autour du concept de langage, qui désigne ces marques temporelles du corps. Avant d'être l'organe d'une transmission, de signes et de sens, le langage est ici pensée comme une dimension du corps. Quel que soit ce corps et quelle qu'en soit la temporalité, le langage en constitue déjà les lieux d'apparition ou les épiphanies. Une croyance se définit comme le langage d'un corps croyant, une souffrance d'un corps souffrant et le sacré d'un corps de sacralité. À une seule exception, tous ces textes ont fait l'objet de circonstances particulières, de conférences ou de publications en article, dans des revues ou des ouvrages collectifs. Ils traversent l'histoire, des débuts de la philosophie et des religions monothéistes, jusqu'aux réflexions critiques du monde contemporain. Ils traversent surtout cette question d'un corps du temps aux confins de l'histoire.
