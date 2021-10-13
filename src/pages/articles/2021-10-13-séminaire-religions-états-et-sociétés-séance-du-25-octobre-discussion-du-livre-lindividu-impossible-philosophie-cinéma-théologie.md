@@ -1,7 +1,8 @@
 ---
 templateKey: article
-title: "Séminaire Religions, États et Sociétés : séance du 25 octobre -
-  discussion du livre L'individu impossible. Philosophie, cinéma, théologie"
+title: "Séminaire Religions, États et Sociétés (CEFR Moscou - en ligne) : séance
+  du 25 octobre - discussion du livre L'individu impossible. Philosophie,
+  cinéma, théologie"
 type: event
 picture:
   display: embed
