@@ -14,4 +14,4 @@ Dans la pensée philosophique d’Emmanuel Levinas, le mot "Dieu" n’est pas in
 \
 Les articles recueillis dans cet ouvrage tentent, sous ces divers aspects, de décrire l’inouïe Transcendance de ce mot Dieu désormais arraché à toute *archê* – à tout fondement onto-théo-logique. Ils se hasardent aussi à suggérer les résonances théologiques et bibliques de cet «  autrement dire Dieu  » préservant l’anarchie du Transcendant. C’est par le Haut que se noue tout vrai dialogue entre le philosophique et le théologique.
 
-Publié le 18 octobre 2021 chez Hermann
+Publication le 18 octobre 2021 chez Hermann
