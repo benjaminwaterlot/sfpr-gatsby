@@ -1,7 +1,6 @@
 ---
 templateKey: article
-title: "À paraître le 13 octobre : La religion dans la philosophie de Paul
-  Ricœur, par Daniel Frey"
+title: La religion dans la philosophie de Paul Ricœur, par Daniel Frey
 type: publication
 picture:
   display: embed
