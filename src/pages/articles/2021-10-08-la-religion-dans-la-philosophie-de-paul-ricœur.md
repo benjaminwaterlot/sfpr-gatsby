@@ -5,7 +5,7 @@ type: publication
 picture:
   display: embed
   src: /img/frey-ricœur.jpeg
-date: 2021-10-08
+date: 2021-10-13
 settings:
   hidden: false
 ---
