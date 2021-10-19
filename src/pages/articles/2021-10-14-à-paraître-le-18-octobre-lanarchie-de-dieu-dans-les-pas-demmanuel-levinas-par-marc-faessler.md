@@ -1,12 +1,11 @@
 ---
 templateKey: article
-title: "À paraître le 18 octobre : L'anarchie de Dieu. Dans les pas d'Emmanuel
-  Levinas, par Marc Faessler"
+title: L'anarchie de Dieu. Dans les pas d'Emmanuel Levinas, par Marc Faessler
 type: publication
 picture:
   display: embed
   src: /img/9791037013187-001-g.jpeg
-date: 2021-10-14
+date: 2021-10-19
 settings:
   hidden: false
 ---
