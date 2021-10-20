@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: L'espace intérieur, par J.-L. Chrétien
+title: L'espace intérieur, par Jean-Louis Chrétien
 type: publication
 picture:
   display: embed
