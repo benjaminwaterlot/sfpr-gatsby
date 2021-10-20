@@ -4,7 +4,7 @@ title: L'espace intérieur, par J.-L. Chrétien
 type: publication
 picture:
   display: embed
-  src: /img/capture-d’écran-2021-10-14-à-14.16.40.png
+  src: /img/livre_moyen_9782707323309.jpg
 date: 2014-01-01
 settings:
   hidden: false
