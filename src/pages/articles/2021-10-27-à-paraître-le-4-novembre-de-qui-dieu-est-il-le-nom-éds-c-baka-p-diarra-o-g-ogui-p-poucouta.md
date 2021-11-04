@@ -1,12 +1,12 @@
 ---
 templateKey: article
-title: "À paraître le 4 novembre : De qui Dieu est-il le nom ? Penser le divin,
-  éds C. Baka, P. Diarra, O. G. Ogui, P. Poucouta"
+title: De qui Dieu est-il le nom ? Penser le divin, éds C. Baka, P. Diarra, O.
+  G. Ogui, P. Poucouta
 type: publication
 picture:
   display: embed
   src: /img/41tncrt-wl._sx332_bo1-204-203-200_.jpg
-date: 2021-10-27
+date: 2021-11-04
 settings:
   hidden: false
 ---
