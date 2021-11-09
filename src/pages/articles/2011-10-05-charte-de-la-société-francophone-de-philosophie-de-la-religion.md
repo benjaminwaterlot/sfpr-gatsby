@@ -4,6 +4,7 @@ title: Charte de la Société Francophone de Philosophie de la Religion
 type: news
 picture:
   display: embed
+  src: /img/capture-d’écran-2021-09-26-à-22.08.22.png
 date: 2011-10-04
 settings:
   hidden: false
