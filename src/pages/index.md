@@ -4,5 +4,5 @@ templateKey: index-page
 intro: Créée en 2011, la SFPR est une société académique internationale dont la
   vocation est de promouvoir les recherches philosophiques universitaires sur
   les religions et l'expérience religieuse.
-featured_article: ""
+featured_article: Crise de l'universel. Le politique à l'épreuve de la religion
 ---
