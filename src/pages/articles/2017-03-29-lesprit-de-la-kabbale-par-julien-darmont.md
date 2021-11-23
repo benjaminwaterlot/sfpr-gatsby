@@ -1,6 +1,6 @@
 ---
 templateKey: article
-title: L'esprit de la Kabbale, par Julien Darmont
+title: L'esprit de la Kabbale, par Julien Darmon
 type: publication
 picture:
   display: embed
