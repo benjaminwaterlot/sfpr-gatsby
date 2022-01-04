@@ -1,12 +1,11 @@
 ---
 templateKey: article
-title: "Parution dès novembre de la nouvelle publication de la Société :
-  Religion et ritualité, éd. Souleymane Bachir Diagne"
+title: Religion et ritualité, éd. Souleymane Bachir Diagne
 type: publication
 picture:
   display: embed
   src: /img/religion-et-ritualité_couverture-1-.jpg
-date: 2021-09-28
+date: 2021-12-23
 settings:
   hidden: false
 ---
