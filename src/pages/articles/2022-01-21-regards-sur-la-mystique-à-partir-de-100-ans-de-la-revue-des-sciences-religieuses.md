@@ -1,7 +1,6 @@
 ---
 templateKey: article
-title: Regards sur la mystique, à partir de 100 ans de la Revue des Sciences
-  Religieuses
+title: Regards sur la mystique, à travers 100 ans de la Revue des Sciences Religieuses
 type: publication
 picture:
   display: embed
