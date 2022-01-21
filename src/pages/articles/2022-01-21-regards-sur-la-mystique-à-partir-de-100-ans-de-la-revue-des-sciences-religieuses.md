@@ -6,7 +6,7 @@ type: publication
 picture:
   display: embed
   src: /img/regards-sur-la-mystique.jpg
-date: 2022-01-21
+date: 2022-01-22
 settings:
   hidden: false
 ---
